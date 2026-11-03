@@ -10,7 +10,7 @@ from tkinter import Button, messagebox
 '''
 root = tk.Tk()
 root.title("Rock, Paper, Scissors")
-root.geometry("600x306")
+root.geometry("600x600")
 
 '''
     Start of the function definitions for the buttons.
