@@ -21,11 +21,13 @@ def paperButtonClick():
     userChoice = "Paper"
     messagebox.showinfo("Paper", "You chose " + userChoice)
 
-def randomChoice():
+'''
+    This function will take an array as the argument and then return a random value from that array.
+'''
+def npcChoice(item_list):
     import random
-    myArray = ["Rock", "Paper", "Scissors"]
-    randomChoice = random.choice(myArray)
-    return randomChoice
+    return random.choice(item_list)
+
 
 '''
     Here are the parameters for the main window.
@@ -35,21 +37,36 @@ root.title("Rock, Paper, Scissors")
 root.geometry("600x306")
 
 '''
+    Here is the list of choices that the NPC is going to select from.
+    I will take these and pass them off to the function that I have defined above.
+'''
+choices = ["Rock", "Paper", "Scissors"]
+
+'''
+    This is declaring a varible that will hold the random value "choice" that is randomly generated from the predefined list.
+    It is then passing that off to the npcChoice function that should randomly select one of the three choices.
+'''
+opponentChoice = npcChoice(choices)
+
+'''
     This is a set of buttons that will allow the user to select their choice.
     These are tied to commands that will run the functions defined when the user clicks on the buttons.
 '''
 rockButton = tk.Button(root, text = "Rock", command = rockButtonClick)
 scissorsButton = tk.Button(root, text = "Scissors", command = scissorsButtonClick)
 paperButton = tk.Button(root, text = "Paper", command = paperButtonClick)
+testLabel = tk.Label(root, text = f" {opponentChoice}")
 
 '''
     This are the pack fuctions. You must declare a pack method in order for those items to be displayed on the root window.
     The items will be displayed in the order that they are packed.
+
+    This bitch is not displaying the label that I have created.
 '''
 rockButton.pack(pady = 20)
 scissorsButton.pack(pady = 20)
 paperButton.pack(pady = 20)
-
+testLabel.pack(pady = 20)
 '''
     This function will run the main loop that currently just displays a blank window.
 '''
