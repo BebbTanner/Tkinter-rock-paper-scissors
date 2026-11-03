@@ -10,12 +10,15 @@ from tkinter import Button, messagebox
     Start of the function definitions for the buttons.
 '''
 def rockButtonClick():
+    userChoice = "Rock"
     messagebox.showinfo("Rock", "You chose Rock!")
 
 def scissorsButtonClick():
+    userChoice = "Scissors"
     messagebox.showinfo("Scissors", "You chose Scissors!")
 
 def paperButtonClick():
+    userChoice = "Paper"
     messagebox.showinfo("Paper", "You chose Paper!")
 
 '''
