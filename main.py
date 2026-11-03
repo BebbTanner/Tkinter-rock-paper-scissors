@@ -1,5 +1,22 @@
+'''
+    Ok so I need to make it so that the buttons actually do something rather than just being there.
+
+'''
+
 import tkinter as tk
 from tkinter import Button, messagebox
+
+'''
+    Start of the function definitions for the buttons.
+'''
+def rockButtonClick():
+    messagebox.showinfo("Rock", "You chose Rock!")
+
+def scissorsButtonClick():
+    messagebox.showinfo("Scissors", "You chose Scissors!")
+
+def paperButtonClick():
+    messagebox.showinfo("Paper", "You chose Paper!")
 
 '''
     Here are the parameters for the main window.
@@ -10,10 +27,11 @@ root.geometry("600x306")
 
 '''
     This is a set of buttons that will allow the user to select their choice.
+    These are tied to commands that will run the functions defined when the user clicks on the buttons.
 '''
-rockButton = tk.Button(root, text = "Rock")
-scissorsButton = tk.Button(root, text = "Scissors")
-paperButton = tk.Button(root, text = "Paper")
+rockButton = tk.Button(root, text = "Rock", command = rockButtonClick)
+scissorsButton = tk.Button(root, text = "Scissors", command = scissorsButtonClick)
+paperButton = tk.Button(root, text = "Paper", command = paperButtonClick)
 
 '''
     This are the pack fuctions. You must declare a pack method in order for those items to be displayed on the root windwow.
