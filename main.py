@@ -55,7 +55,7 @@ opponentChoice = npcChoice(choices)
 rockButton = tk.Button(root, text = "Rock", command = rockButtonClick)
 scissorsButton = tk.Button(root, text = "Scissors", command = scissorsButtonClick)
 paperButton = tk.Button(root, text = "Paper", command = paperButtonClick)
-testLabel = tk.Label(root, text = f" {opponentChoice}")
+Label_1 = tk.Label(root, text = f" {opponentChoice}")
 
 '''
     This are the pack fuctions. You must declare a pack method in order for those items to be displayed on the root window.
@@ -66,13 +66,13 @@ testLabel = tk.Label(root, text = f" {opponentChoice}")
 rockButton.pack(pady = 20)
 scissorsButton.pack(pady = 20)
 paperButton.pack(pady = 20)
-testLabel.pack(pady = 20)
+Label_1.pack(pady = 20)
 
 '''
     Dipshit you forgot to call the function.
     How is this supposed to do the thing if you don't call the got damned function.
 '''
-npcChoice(testLabel, choices)
+npcChoice(Label_1, choices)
 
 '''
     This function will run the main loop that currently just displays a blank window.
