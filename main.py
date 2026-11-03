@@ -18,6 +18,7 @@ root.geometry("600x600")
 # Global variables?
 
 choices = ["Rock", "Paper", "Scissors"]
+opponentChoice = random.choice(choices)
 
 # Functions
 
@@ -26,11 +27,6 @@ def rockButtonClick():
     userChoice = "Rock"
     messagebox.showinfo("Rock", "You chose " + userChoice)
     return userChoice
-
-def randomChoice(item_list):
-    return random.choice(item_list)
-
-opponentChoice = randomChoice(choices)
 
 # Widgets
 
@@ -43,7 +39,5 @@ rockButton.pack(pady = 20)
 Label_1.pack(pady = 20)
 
 # Function Calls
-
-randomChoice(choices)
 
 root.mainloop()
