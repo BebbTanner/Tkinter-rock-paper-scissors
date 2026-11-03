@@ -1,8 +1,3 @@
-'''
-    So I need to figure out how to switch the user's choice when the button is clicked how?
-    So I think rather than having the userChoice variable inside of each function I should instead allow that functions to change the value of a global variable.
-'''
-
 # Libraries
 
 import random
