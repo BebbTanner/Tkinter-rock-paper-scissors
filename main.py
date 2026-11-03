@@ -6,6 +6,13 @@ import tkinter as tk
 from tkinter import Button, messagebox
 
 '''
+    Here are the parameters for the main window.
+'''
+root = tk.Tk()
+root.title("Rock, Paper, Scissors")
+root.geometry("600x306")
+
+'''
     Start of the function definitions for the buttons.
 '''
 def rockButtonClick():
@@ -29,13 +36,6 @@ def npcChoice(item_list):
     import random
     return random.choice(item_list)
 
-
-'''
-    Here are the parameters for the main window.
-'''
-root = tk.Tk()
-root.title("Rock, Paper, Scissors")
-root.geometry("600x306")
 
 '''
     Here is the list of choices that the NPC is going to select from.
