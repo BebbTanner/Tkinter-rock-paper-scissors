@@ -67,6 +67,13 @@ rockButton.pack(pady = 20)
 scissorsButton.pack(pady = 20)
 paperButton.pack(pady = 20)
 testLabel.pack(pady = 20)
+
+'''
+    Dipshit you forgot to call the function.
+    How is this supposed to do the thing if you don't call the got damned function.
+'''
+npcChoice(testLabel, choices)
+
 '''
     This function will run the main loop that currently just displays a blank window.
 '''
