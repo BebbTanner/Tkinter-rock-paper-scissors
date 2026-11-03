@@ -11,15 +11,15 @@ from tkinter import Button, messagebox
 '''
 def rockButtonClick():
     userChoice = "Rock"
-    messagebox.showinfo("Rock", "You chose Rock!")
+    messagebox.showinfo("Rock", "You chose " + userChoice)
 
 def scissorsButtonClick():
     userChoice = "Scissors"
-    messagebox.showinfo("Scissors", "You chose Scissors!")
+    messagebox.showinfo("Scissors", "You chose " + userChoice)
 
 def paperButtonClick():
     userChoice = "Paper"
-    messagebox.showinfo("Paper", "You chose Paper!")
+    messagebox.showinfo("Paper", "You chose " + userChoice)
 
 '''
     Here are the parameters for the main window.
