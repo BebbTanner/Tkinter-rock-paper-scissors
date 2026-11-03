@@ -15,10 +15,9 @@ root = tk.Tk()
 root.title("Rock, Paper, Scissors")
 root.geometry("600x600")
 
-# Global variables?
+# Global variables
 
-choices = ["Rock", "Paper", "Scissors"]
-opponentChoice = random.choice(choices)
+opponentChoice = random.choice(["Rock", "Paper", "Scissors"])
 
 # Functions
 
