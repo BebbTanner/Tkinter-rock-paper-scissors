@@ -13,7 +13,6 @@ root.geometry("600x600")
 
 choices = ["Rock", "Paper", "Scissors"]
 
-
 # Functions
 
 def rockButtonClick():
