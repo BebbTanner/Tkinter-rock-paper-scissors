@@ -11,6 +11,7 @@ from tkinter import Button, messagebox
 def rockButtonClick():
     userChoice = "Rock"
     messagebox.showinfo("Rock", "You chose " + userChoice)
+    return userChoice
 
 
 def scissorsButtonClick():
@@ -76,7 +77,7 @@ Label_1.pack(pady = 20)
     Okay so here is where I am going to call of the fucntions that will need ran.
     If a funciton is updating something on the root window the function will need to be called before the root.mainloop() function...I think.
 '''
-npcChoice(Label_1, choices)
+npcChoice(choices)
 
 '''
     This function will run the main loop that currently just displays a blank window.
