@@ -1,3 +1,8 @@
+'''
+    So I need to figure out how to switch the user's choice when the button is clicked how?
+    So I think rather than having the userChoice variable inside of each function I should instead allow that functions to change the value of a global variable.
+'''
+
 # Libraries
 
 import tkinter as tk
@@ -20,13 +25,6 @@ def rockButtonClick():
     messagebox.showinfo("Rock", "You chose " + userChoice)
     return userChoice
 
-def scissorsButtonClick():
-    userChoice = "Scissors"
-    messagebox.showinfo("Scissors", "You chose " + userChoice)
-
-def paperButtonClick():
-    userChoice = "Paper"
-    messagebox.showinfo("Paper", "You chose " + userChoice)
 
 def npcChoice(item_list):
     import random
@@ -37,15 +35,11 @@ opponentChoice = npcChoice(choices)
 # Widgets
 
 rockButton = tk.Button(root, text = "Rock", command = rockButtonClick)
-scissorsButton = tk.Button(root, text = "Scissors", command = scissorsButtonClick)
-paperButton = tk.Button(root, text = "Paper", command = paperButtonClick)
 Label_1 = tk.Label(root, text = f" {opponentChoice}")
 
 # Packing
 
 rockButton.pack(pady = 20)
-scissorsButton.pack(pady = 20)
-paperButton.pack(pady = 20)
 Label_1.pack(pady = 20)
 
 # Function Calls
