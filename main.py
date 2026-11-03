@@ -5,6 +5,7 @@
 
 # Libraries
 
+import random
 import tkinter as tk
 from tkinter import Button, messagebox
 
@@ -21,16 +22,15 @@ choices = ["Rock", "Paper", "Scissors"]
 # Functions
 
 def rockButtonClick():
+    global userChoice
     userChoice = "Rock"
     messagebox.showinfo("Rock", "You chose " + userChoice)
     return userChoice
 
-
-def npcChoice(item_list):
-    import random
+def randomChoice(item_list):
     return random.choice(item_list)
 
-opponentChoice = npcChoice(choices)
+opponentChoice = randomChoice(choices)
 
 # Widgets
 
@@ -44,6 +44,6 @@ Label_1.pack(pady = 20)
 
 # Function Calls
 
-npcChoice(choices)
+randomChoice(choices)
 
 root.mainloop()
