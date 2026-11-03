@@ -1,6 +1,5 @@
 '''
     Ok so I need to make it so that the buttons actually do something rather than just being there.
-
 '''
 
 import tkinter as tk
@@ -12,6 +11,7 @@ from tkinter import Button, messagebox
 def rockButtonClick():
     userChoice = "Rock"
     messagebox.showinfo("Rock", "You chose " + userChoice)
+
 
 def scissorsButtonClick():
     userChoice = "Scissors"
@@ -71,6 +71,10 @@ Label_1.pack(pady = 20)
 '''
     Dipshit you forgot to call the function.
     How is this supposed to do the thing if you don't call the got damned function.
+    Ok so now I think I want to make it so that this function will not run until after the user has made their choice.
+
+    Okay so here is where I am going to call of the fucntions that will need ran.
+    If a funciton is updating something on the root window the function will need to be called before the root.mainloop() function...I think.
 '''
 npcChoice(Label_1, choices)
 
