@@ -21,6 +21,12 @@ def paperButtonClick():
     userChoice = "Paper"
     messagebox.showinfo("Paper", "You chose " + userChoice)
 
+def randomChoice():
+    import random
+    myArray = ["Rock", "Paper", "Scissors"]
+    randomChoice = random.choice(myArray)
+    return randomChoice
+
 '''
     Here are the parameters for the main window.
 '''
@@ -37,7 +43,8 @@ scissorsButton = tk.Button(root, text = "Scissors", command = scissorsButtonClic
 paperButton = tk.Button(root, text = "Paper", command = paperButtonClick)
 
 '''
-    This are the pack fuctions. You must declare a pack method in order for those items to be displayed on the root windwow.
+    This are the pack fuctions. You must declare a pack method in order for those items to be displayed on the root window.
+    The items will be displayed in the order that they are packed.
 '''
 rockButton.pack(pady = 20)
 scissorsButton.pack(pady = 20)
