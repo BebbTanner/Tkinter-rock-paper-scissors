@@ -64,6 +64,9 @@ userLabel.pack(padx = 10, pady=10)
 opponentLabel = tk.Label(root, text=f"Opponent choice: {opponentChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
 opponentLabel.pack(padx=10, pady=10)
 
+scoreLabel = tk.Label(root, text="Score label test", font=("Arial", 14), bg="#f0f0f0")
+scoreLabel.pack(padx=10, pady=10)
+
 # Function definitions
 
 '''
