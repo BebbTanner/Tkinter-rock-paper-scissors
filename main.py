@@ -1,3 +1,7 @@
+'''
+    I found a navbar example that I think would work really well for this program.
+'''
+
 # Libraries
 
 import random
