@@ -23,7 +23,7 @@ navbar.pack_propagate(False)
 
 # Nav Centering
 
-navContainer - tk.Frame(navbar, bg = "#2c3e50")
+navContainer = tk.Frame(navbar, bg = "#2c3e50")
 navContainer.pack(expand = True, fill = "y")
 
 # Global variables
@@ -45,21 +45,14 @@ btnStyles = {
 
 # Functions
 
+'''
+    I am keeping this in for now because I believe that I will be using it for the choice implmentation.
+'''
 def rockButtonClick():
     global userChoice
     userChoice = "Rock"
     messagebox.showinfo("Rock", "You chose " + userChoice)
     return userChoice
-
-# Widgets
-
-rockButton = tk.Button(root, text = "Rock", command = rockButtonClick)
-Label_1 = tk.Label(root, text = f" {opponentChoice}")
-
-# Packing
-
-rockButton.pack(pady = 20)
-Label_1.pack(pady = 20)
 
 # Function Calls
 
