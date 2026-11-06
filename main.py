@@ -1,7 +1,8 @@
 '''
     So now that I somewhat have the layout that I want I need to figure out how to implement the functions of this page.
 
-    I need to now set up a function that 
+    I need to now set up a function that will give the NPC choice.
+    The problem here is that I need it to reseed during the runtime of the program and not when it gets reset.
 '''
 
 # Libraries
