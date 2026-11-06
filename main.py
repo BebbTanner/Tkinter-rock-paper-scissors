@@ -11,7 +11,6 @@
 import random
 import tkinter as tk
 from tkinter import Button
-import styles
 
 # Root window parameters
 
