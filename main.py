@@ -1,6 +1,9 @@
 '''
     This now allows the user to make a choice and updates the NPC choice.
     Now I need to make it so that these two ansewrs get compared.
+
+    From what I understand I can create frames to place onto the main window and then place my content in those frames.
+    This should help me with general layout for the root window.
 '''
 
 # Libraries
@@ -17,7 +20,7 @@ root.title("Rock, Paper, Scissors")
 root.geometry("500x400")
 root.configure(bg = "#f0f0f0")
 
-# Nav container
+# Frames
 
 navbar = tk.Frame(root, bg = "#2c3e50", height = 50)
 navbar.pack(side = "top", fill = "x")
