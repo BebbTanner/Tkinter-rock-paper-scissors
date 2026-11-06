@@ -3,6 +3,10 @@
 
     I need to now set up a function that will give the NPC choice.
     The problem here is that I need it to reseed during the runtime of the program and not when it gets reset.
+
+    I think I need to make a function that will update the opponent choice each time the user selects their choice...
+    Hold on, I think I can implement that in the setChoice function.
+    It should update everything each time the button is clicked, do in theory it should be able to update the random choice each time as well.
 '''
 
 # Libraries
@@ -71,14 +75,6 @@ opponentLabel.pack(expand=True)
 
 # Function definitions
 
-'''
-    I am keeping this in for now because I believe that I will be using it for the choice implmentation.
-
-    I think that instead of the navigate function injected into the buttons.
-    Instead of switching between pages I think that I need it to switch between variable choices instead.
-    I am unsure of how to do that at this time.
-'''
-
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
     userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
@@ -87,7 +83,6 @@ def setChoice(playerChoice):
     print(f"User chose: {userChoice.get()}") 
 
 def setNPC(npcChoice):
-  
     opponentLabel.config(text=f"Opponent Choice: {opponentChoice}")
 
 # Function Calls
