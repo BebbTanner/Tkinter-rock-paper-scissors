@@ -29,6 +29,7 @@ navContainer.pack(expand = True, fill = "y")
 # Global variables
 
 opponentChoice = random.choice(["Rock", "Paper", "Scissors"])
+userChoice = tk.StringVar(value="None Selected")
 
 # Button Styling
 
@@ -45,22 +46,19 @@ btnStyles = {
 
 # Buttons
 
-rockButton = tk.Button(navContainer, text = "Rock", command= lambda: navigate("Rock"), **btnStyles)
+rockButton = tk.Button(navContainer, text = "Rock", command= lambda: setChoice("Rock"), **btnStyles)
 rockButton.pack(side="left", fill="y")
 
-paperButton = tk.Button(navContainer, text = "Paper", command= lambda: navigate("Paper"), **btnStyles)
+paperButton = tk.Button(navContainer, text = "Paper", command= lambda: setChoice("Paper"), **btnStyles)
 paperButton.pack(side="left", fill="y")
 
-scissorsButton = tk.Button(navContainer, text = "Scissors", command= lambda: navigate("Scissors"), **btnStyles)
+scissorsButton = tk.Button(navContainer, text = "Scissors", command= lambda: setChoice("Scissors"), **btnStyles)
 scissorsButton.pack(side="left", fill="y")
 
 # Labels
 
-contentLabel = tk.Label(root, text="Please make a choice: ", font=("Arial, 14"), bg="#f0f0f0")
-contentLabel.pack(expand=True)
-
-contentLabel2 = tk.Label(root, text="NPC Choice: ", font=("Arial, 14"), bg="#f0f0f0")
-contentLabel2.pack(expand=True)
+label = tk.Label(root, text=f"Current choice: {userChoice.get()}")
+label.pack(pady=5)
 
 # Function definitions
 
@@ -72,11 +70,13 @@ contentLabel2.pack(expand=True)
     I am unsure of how to do that at this time.
 '''
 
-def navigate(page_name):
-    contentLabel.config(text=f"You chose {page_name}")
+#def navigate(page_name):
+#    contentLabel.config(text=f"You chose {page_name}")
 
-#def setChoice():
-    #
+def setChoice(choice_value):
+    userChoice.set(choice_value)
+    print(f"User chose: {userChoice.get()}") 
+    label.config(text=f"Current Choice: {userChoice.get()}")
 
 # Function Calls
 
