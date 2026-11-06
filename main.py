@@ -70,9 +70,6 @@ label.pack(pady=5)
     I am unsure of how to do that at this time.
 '''
 
-#def navigate(page_name):
-#    contentLabel.config(text=f"You chose {page_name}")
-
 def setChoice(choice_value):
     userChoice.set(choice_value)
     print(f"User chose: {userChoice.get()}") 
