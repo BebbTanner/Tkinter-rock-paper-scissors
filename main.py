@@ -1,5 +1,7 @@
 '''
     So now that I somewhat have the layout that I want I need to figure out how to implement the functions of this page.
+
+    I need to now set up a function that 
 '''
 
 # Libraries
@@ -7,6 +9,8 @@
 import random
 import tkinter as tk
 from tkinter import Button
+
+
 
 # Root window parameters
 
@@ -57,8 +61,8 @@ scissorsButton.pack(side="left", fill="y")
 
 # Labels
 
-label = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
-label.pack(expand=True)
+userLabel = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
+userLabel.pack(expand=True)
 
 # Function definitions
 
@@ -70,10 +74,14 @@ label.pack(expand=True)
     I am unsure of how to do that at this time.
 '''
 
-def setChoice(choice_value):
-    userChoice.set(choice_value)
+def setChoice(playerChoice):
+    userChoice.set(playerChoice)
+    userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
+
+    # Print the userChoice variable to the console to confirm that it updated
     print(f"User chose: {userChoice.get()}") 
-    label.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
+
+#def setNPC():
 
 # Function Calls
 
