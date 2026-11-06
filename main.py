@@ -62,7 +62,7 @@ contentLabel.pack(expand=True)
 contentLabel2 = tk.Label(root, text="NPC Choice: ", font=("Arial, 14"), bg="#f0f0f0")
 contentLabel2.pack(expand=True)
 
-# Function definitoins
+# Function definitions
 
 '''
     I am keeping this in for now because I believe that I will be using it for the choice implmentation.
@@ -71,14 +71,12 @@ contentLabel2.pack(expand=True)
     Instead of switching between pages I think that I need it to switch between variable choices instead.
     I am unsure of how to do that at this time.
 '''
-def rockButtonClick():
-    global userChoice
-    userChoice = "Rock"
-    messagebox.showinfo("Rock", "You chose " + userChoice)
-    return userChoice
 
 def navigate(page_name):
     contentLabel.config(text=f"You chose {page_name}")
+
+#def setChoice():
+    #
 
 # Function Calls
 
