@@ -78,13 +78,18 @@ opponentLabel.pack(expand=True)
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
     userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
-
-    # Print the userChoice variable to the console to confirm that it updated
     print(f"User chose: {userChoice.get()}") 
 
-def setNPC(npcChoice):
-    opponentLabel.config(text=f"Opponent Choice: {opponentChoice}")
-
+    '''
+        This updates the NPC choice each time the player selects the button.
+        It actually randomizes the choice each time the function runs as well.
+        So far, this does what I want it to.
+        I think that I just need to now take the NPC choice and print it on a label.
+    '''
+    random.seed()
+    randomChoice = random.choice(["Rock", "Paper", "Scissors"])
+    print(f"NPC choice: {randomChoice}")
+    
 # Function Calls
 
 root.mainloop()
