@@ -1,12 +1,6 @@
 '''
-    So now that I somewhat have the layout that I want I need to figure out how to implement the functions of this page.
-
-    I need to now set up a function that will give the NPC choice.
-    The problem here is that I need it to reseed during the runtime of the program and not when it gets reset.
-
-    I think I need to make a function that will update the opponent choice each time the user selects their choice...
-    Hold on, I think I can implement that in the setChoice function.
-    It should update everything each time the button is clicked, do in theory it should be able to update the random choice each time as well.
+    This now allows the user to make a choice and updates the NPC choice.
+    Now I need to make it so that these two ansewrs get compared.
 '''
 
 # Libraries
@@ -37,7 +31,6 @@ navContainer.pack(expand = True, fill = "y")
 
 # Global variables
 
-#npcChoice = random.choice(["Rock", "Paper", "Scissors"])
 opponentChoice = tk.StringVar(value = " none ")
 userChoice = tk.StringVar(value="None Selected")
 
@@ -81,13 +74,12 @@ def setChoice(playerChoice):
     print(f"User chose: {userChoice.get()}") 
 
     '''
-        This updates the NPC choice each time the player selects the button.
-        It actually randomizes the choice each time the function runs as well.
-        So far, this does what I want it to.
-        I think that I just need to now take the NPC choice and print it on a label.
+        This is set in this function for now.
+        I would like to put this in its own funcition eventually.
     '''
     random.seed()
     randomChoice = random.choice(["Rock", "Paper", "Scissors"])
+    opponentLabel.config(text=f"Opponent Choice: {randomChoice}", font=("Arial", 14), bg="#f0f0f0")
     print(f"NPC choice: {randomChoice}")
     
 # Function Calls
