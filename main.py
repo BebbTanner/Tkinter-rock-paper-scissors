@@ -29,7 +29,7 @@ navContainer.pack(expand = True, fill = "y")
 
 # Global variables
 
-opponentChoice = tk.StringVar(value = " none ")
+opponentChoice = tk.StringVar(value = "Waiting for player choice")
 userChoice = tk.StringVar(value="None Selected")
 
 # Button Styling
@@ -66,6 +66,10 @@ opponentLabel.pack(expand=True)
 
 # Function definitions
 
+'''
+    What are the two variables that we need to be comparing in order to determine the winner?
+    I believe that it should be playerChoice and randomChoice.
+'''
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
     userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
@@ -77,7 +81,7 @@ def setChoice(playerChoice):
     '''
     random.seed()
     randomChoice = random.choice(["Rock", "Paper", "Scissors"])
-    opponentLabel.config(text=f"Opponent Choice: {randomChoice}", font=("Arial", 14), bg="#f0f0f0")
+    opponentLabel.config(text=f"Opponent: {randomChoice}", font=("Arial", 14), bg="#f0f0f0")
     print(f"NPC choice: {randomChoice}")
     
 # Function Calls
