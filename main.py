@@ -33,7 +33,8 @@ navContainer.pack(expand = True, fill = "y")
 
 # Global variables
 
-opponentChoice = random.choice(["Rock", "Paper", "Scissors"])
+#npcChoice = random.choice(["Rock", "Paper", "Scissors"])
+opponentChoice = tk.StringVar(value = " none ")
 userChoice = tk.StringVar(value="None Selected")
 
 # Button Styling
@@ -65,6 +66,9 @@ scissorsButton.pack(side="left", fill="y")
 userLabel = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
 userLabel.pack(expand=True)
 
+opponentLabel = tk.Label(root, text=f"Opponent choice: {opponentChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
+opponentLabel.pack(expand=True)
+
 # Function definitions
 
 '''
@@ -82,7 +86,9 @@ def setChoice(playerChoice):
     # Print the userChoice variable to the console to confirm that it updated
     print(f"User chose: {userChoice.get()}") 
 
-#def setNPC():
+def setNPC(npcChoice):
+  
+    opponentLabel.config(text=f"Opponent Choice: {opponentChoice}")
 
 # Function Calls
 
