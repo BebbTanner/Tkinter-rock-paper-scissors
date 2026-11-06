@@ -6,7 +6,7 @@
 
 import random
 import tkinter as tk
-from tkinter import Button, messagebox
+from tkinter import Button
 
 # Root window parameters
 
@@ -57,8 +57,8 @@ scissorsButton.pack(side="left", fill="y")
 
 # Labels
 
-label = tk.Label(root, text=f"Current choice: {userChoice.get()}")
-label.pack(pady=5)
+label = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
+label.pack(expand=True)
 
 # Function definitions
 
@@ -73,7 +73,7 @@ label.pack(pady=5)
 def setChoice(choice_value):
     userChoice.set(choice_value)
     print(f"User chose: {userChoice.get()}") 
-    label.config(text=f"Current Choice: {userChoice.get()}")
+    label.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
 
 # Function Calls
 
