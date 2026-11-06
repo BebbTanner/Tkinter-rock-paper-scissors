@@ -8,6 +8,7 @@
 import random
 import tkinter as tk
 from tkinter import Button
+import styles
 
 # Root window parameters
 
@@ -91,6 +92,7 @@ def setChoice(playerChoice):
     print(f"NPC choice: {randomChoice}")
 
 # Playing around with an example that I found
+# I think that I can use these to create a frame to put items in, so that they can be side by side.
 '''
 rectangle_1 = tk.Label(root, text="Rectangle 1", bg="green", fg="white")
 rectangle_1.pack(ipadx=10, ipady=10, side="left", expand=True, fill="both")
