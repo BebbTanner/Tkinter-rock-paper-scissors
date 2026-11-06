@@ -54,6 +54,9 @@ paperButton.pack(side="left", fill="y")
 scissorsButton = tk.Button(navContainer, text = "Scissors", command= lambda: navigate("Scissors"), **btnStyles)
 scissorsButton.pack(side="left", fill="y")
 
+contentLabel = tk.Label(root, text="Please make a choice: ", font=("Arial, 14"), bg="#f0f0f0")
+contentLabel.pack(expand=True)
+
 # Function definitoins
 
 '''
