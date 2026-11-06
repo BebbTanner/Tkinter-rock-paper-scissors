@@ -13,7 +13,7 @@ from tkinter import Button
 
 root = tk.Tk()
 root.title("Rock, Paper, Scissors")
-root.geometry("600x600")
+root.geometry("500x400")
 root.configure(bg = "#f0f0f0")
 
 # Nav container
