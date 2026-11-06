@@ -1,5 +1,5 @@
 '''
-    I found a navbar example that I think would work really well for this program.
+    So now that I somewhat have the layout that I want I need to figure out how to implement the functions of this page.
 '''
 
 # Libraries
@@ -43,7 +43,7 @@ btnStyles = {
     "cursor": "hand2"
 }
 
-# Button Styling
+# Buttons
 
 rockButton = tk.Button(navContainer, text = "Rock", command= lambda: navigate("Rock"), **btnStyles)
 rockButton.pack(side="left", fill="y")
@@ -54,13 +54,22 @@ paperButton.pack(side="left", fill="y")
 scissorsButton = tk.Button(navContainer, text = "Scissors", command= lambda: navigate("Scissors"), **btnStyles)
 scissorsButton.pack(side="left", fill="y")
 
+# Labels
+
 contentLabel = tk.Label(root, text="Please make a choice: ", font=("Arial, 14"), bg="#f0f0f0")
 contentLabel.pack(expand=True)
+
+contentLabel2 = tk.Label(root, text="NPC Choice: ", font=("Arial, 14"), bg="#f0f0f0")
+contentLabel2.pack(expand=True)
 
 # Function definitoins
 
 '''
     I am keeping this in for now because I believe that I will be using it for the choice implmentation.
+
+    I think that instead of the navigate function injected into the buttons.
+    Instead of switching between pages I think that I need it to switch between variable choices instead.
+    I am unsure of how to do that at this time.
 '''
 def rockButtonClick():
     global userChoice
