@@ -58,13 +58,13 @@ scissorsButton.pack(side="left", fill="y")
 
 # Labels
 
-userLabel = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
+userLabel = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
 userLabel.pack(padx = 10, pady=10)
 
-opponentLabel = tk.Label(root, text=f"Opponent choice: {opponentChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
+opponentLabel = tk.Label(root, text=f"Opponent choice: {opponentChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
 opponentLabel.pack(padx=10, pady=10)
 
-scoreLabel = tk.Label(root, text="Score label test", font=("Arial", 14), bg="#f0f0f0")
+scoreLabel = tk.Label(root, text="Score label test", font=("Arial", 12), bg="#f0f0f0")
 scoreLabel.pack(padx=10, pady=10)
 
 # Function definitions
@@ -75,7 +75,7 @@ scoreLabel.pack(padx=10, pady=10)
 '''
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
-    userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 14), bg="#f0f0f0")
+    userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
     print(f"User chose: {userChoice.get()}") 
 
     '''
@@ -84,7 +84,7 @@ def setChoice(playerChoice):
     '''
     random.seed()
     randomChoice = random.choice(["Rock", "Paper", "Scissors"])
-    opponentLabel.config(text=f"Opponent: {randomChoice}", font=("Arial", 14), bg="#f0f0f0")
+    opponentLabel.config(text=f"Opponent: {randomChoice}", font=("Arial", 12), bg="#f0f0f0")
     print(f"NPC choice: {randomChoice}")
     
 # Function Calls
