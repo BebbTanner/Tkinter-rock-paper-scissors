@@ -59,16 +59,16 @@ scissorsButton.pack(side="left", fill="y")
 # Labels
 
 userLabel = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
-userLabel.pack(padx = 10, pady=10)
+userLabel.pack(padx = 10, pady=10, fill="both")
 
 opponentLabel = tk.Label(root, text=f"Opponent choice: {opponentChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
 opponentLabel.pack(padx=10, pady=10)
 
 playerscoreLabel = tk.Label(root, text="Player Score: ", font=("Arial", 12), bg="#f0f0f0")
-playerscoreLabel.pack(padx=10, pady=10)
+playerscoreLabel.pack(ipadx=10, ipady=10, side="left", expand=True, fill="both")
 
 opponentscoreLabel = tk.Label(root, text="Opponent Score: ", font=("Arial", 12), bg="#f0f0f0")
-opponentscoreLabel.pack(padx=10, pady=10)
+opponentscoreLabel.pack(ipadx=10, ipady=10, side="left", expand=True, fill="both")
 
 # Function definitions
 
@@ -89,7 +89,16 @@ def setChoice(playerChoice):
     randomChoice = random.choice(["Rock", "Paper", "Scissors"])
     opponentLabel.config(text=f"Opponent: {randomChoice}", font=("Arial", 12), bg="#f0f0f0")
     print(f"NPC choice: {randomChoice}")
-    
+
+# Playing around with an example that I found
+'''
+rectangle_1 = tk.Label(root, text="Rectangle 1", bg="green", fg="white")
+rectangle_1.pack(ipadx=10, ipady=10, side="left", expand=True, fill="both")
+
+rectangle_2 = tk.Label(root, text="Rectangle 2", bg="red", fg="white")
+rectangle_2.pack(ipadx=10, ipady=10, side="left", expand=True, fill="both")
+'''
+
 # Function Calls
 
 root.mainloop()
