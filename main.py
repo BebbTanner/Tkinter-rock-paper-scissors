@@ -43,7 +43,18 @@ btnStyles = {
     "cursor": "hand2"
 }
 
-# Functions
+# Button Styling
+
+rockButton = tk.Button(navContainer, text = "Rock", command= lambda: navigate("Rock"), **btnStyles)
+rockButton.pack(side="left", fill="y")
+
+paperButton = tk.Button(navContainer, text = "Paper", command= lambda: navigate("Paper"), **btnStyles)
+paperButton.pack(side="left", fill="y")
+
+scissorsButton = tk.Button(navContainer, text = "Scissors", command= lambda: navigate("Scissors"), **btnStyles)
+scissorsButton.pack(side="left", fill="y")
+
+# Function definitoins
 
 '''
     I am keeping this in for now because I believe that I will be using it for the choice implmentation.
@@ -53,6 +64,9 @@ def rockButtonClick():
     userChoice = "Rock"
     messagebox.showinfo("Rock", "You chose " + userChoice)
     return userChoice
+
+def navigate(page_name):
+    contentLabel.config(text=f"You chose {page_name}")
 
 # Function Calls
 
