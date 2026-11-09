@@ -1,19 +1,3 @@
-'''
-    playerScore = 0
-    opponentScore = 0
-
-    if result == opponent wins:
-        opponentScore = opponentScore + 1
-    
-    elif result == you win:
-        playerScore = playerScore + 1
-
-    playerscorelabel.config(text=f"Player score: {playerScore}")
-    opponentscorelabel.config(textf"Opponent score: {opponentScore}")
-
-    So I think that if I take this and put it in the setChoice function it should update the score labels.
-'''
-
 # Libraries
 
 import random
@@ -32,6 +16,8 @@ navbar.pack(side = "top", fill = "x")
 navbar.pack_propagate(False)
 navContainer = tk.Frame(navbar, bg = "#2c3e50")
 navContainer.pack(expand = True, fill = "y")
+
+
 
 # Functions
 
@@ -83,9 +69,13 @@ def setChoice(playerChoice):
     playerscoreLabel.config(text=f"Player score: {playerScore}")
     opponentscoreLabel.config(text=f"Opponent score: {opponentScore}")
 
+
+
 # Global variables
 
 userChoice = tk.StringVar()
+
+
 
 # Button Styling
 
@@ -104,6 +94,8 @@ lblStyles = {
     "font":("Arial", 12)
 }
 
+
+
 # Buttons
 
 rockButton = tk.Button(navContainer, text = "Rock", command= lambda: setChoice("Rock"), **btnStyles)
@@ -114,6 +106,8 @@ paperButton.pack(side="left", fill="y")
 
 scissorsButton = tk.Button(navContainer, text = "Scissors", command= lambda: setChoice("Scissors"), **btnStyles)
 scissorsButton.pack(side="left", fill="y")
+
+
 
 # Labels
 
