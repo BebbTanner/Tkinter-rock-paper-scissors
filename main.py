@@ -53,7 +53,7 @@ def opponentChoice():
 # Player choice
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
-    userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
+    userLabel.config(text=f"Player Choice: {userChoice.get()}", **lblStyles)
 
     currentChoice = userChoice.get()
     npcChoice = opponentChoice()
@@ -64,6 +64,10 @@ def setChoice(playerChoice):
 # Scoring function
 def updateScore(result):
 
+    '''
+        So I set this to none and with each update of the loop it kept it as None.
+        This makes me wonder if this is not updating correctly.
+    '''
     playerScore = 0
     opponentScore = 0
 
@@ -75,6 +79,8 @@ def updateScore(result):
 
     playerscoreLabel.config(text=f"Player score: {playerScore}")
     opponentscoreLabel.config(text=f"Opponent score: {opponentScore}")
+
+  
 
 
 
