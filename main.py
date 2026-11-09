@@ -14,14 +14,12 @@ import random
 import tkinter as tk
 from tkinter import Button
 
-# Root window parameters
+# UI setup
 
 root = tk.Tk()
 root.title("Rock, Paper, Scissors")
 root.geometry("500x400")
 root.configure(bg = "#f0f0f0")
-
-# Navbar properties
 
 navbar = tk.Frame(root, bg = "#2c3e50", height = 50)
 navbar.pack(side = "top", fill = "x")
@@ -29,7 +27,7 @@ navbar.pack_propagate(False)
 navContainer = tk.Frame(navbar, bg = "#2c3e50")
 navContainer.pack(expand = True, fill = "y")
 
-# Function relocation?
+# Function
 
 # Determine winner function
 def determineWinner(player, opponent):
@@ -112,27 +110,6 @@ playerscoreLabel.pack(padx = 10, pady=10)
 
 opponentscoreLabel = tk.Label(root, text="Opponent Score: ", font=("Arial", 12), bg="#f0f0f0")
 opponentscoreLabel.pack(padx = 10, pady=10)
-
-# Function definitions
-
-'''
-    What are the two variables that we need to be comparing in order to determine the winner?
-    I believe that it should be playerChoice and randomChoice.
-
-    So going back to last week, I think that in order to get this to work I need to seperate the setChoice functions.
-    I need one for player choice and one for opponent choice.
-
-    Then, those two funcitons need to output to a global variable so that I can then kick them into the determine winner function.
-    
-    on paper this all makes since, but keep in mind I might have to do some resturcturing of this code so the end result might look different.
-'''
-
-'''
-    random.seed()
-    randomChoice = random.choice(["Rock", "Paper", "Scissors"])
-    opponentLabel.config(text=f"Opponent: {randomChoice}", font=("Arial", 12), bg="#f0f0f0")
-    print(f"NPC choice: {randomChoice}")
-'''
 
 # Function Calls
 
