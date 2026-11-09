@@ -13,7 +13,7 @@ from tkinter import *
 root = tk.Tk()
 root.title("Rock, Paper, Scissors")
 root.geometry("500x400")
-root.configure(bg = "#f0f0f0")
+root.configure(bg = "#a9a9a9")
 
 navbar = tk.Frame(root, bg = "#2c3e50", height = 50)
 navbar.pack(side = "top", fill = "x")
@@ -102,7 +102,8 @@ btnStyles = {
 }
 
 lblStyles = {
-    "font":("Arial", 12)
+    "font":("Arial", 12),
+    "bg": "#a9a9a9"
 }
 
 
