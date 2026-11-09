@@ -82,8 +82,6 @@ def updateScore(result):
 
   
 
-
-
 # Global variables
 
 userChoice = tk.StringVar()
