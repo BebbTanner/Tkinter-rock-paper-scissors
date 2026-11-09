@@ -48,6 +48,14 @@ def determineWinner(player, opponent):
         return "Opponent wins"
 
 # Opponent choice?
+def OpponentChoice():
+    choices = ["Rock", "Paper", "Scissors"]]
+    randomChoice = random.choice(choices)
+
+    opponentLabel.config(text=f"{randomChoice}")
+    print(f"NPC: {randomChoice}")
+
+    return randomChoice
 
 # Global variables
 
