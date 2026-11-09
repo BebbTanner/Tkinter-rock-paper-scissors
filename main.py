@@ -80,8 +80,8 @@ def setChoice(playerChoice):
     elif result == 'You win':
         playerScore = playerScore + 1
 
-    print(f"Player: {playerScore}")
-    print(f"NPC: {opponentScore}")
+    playerscoreLabel.config(text=f"Player score: {playerScore}")
+    opponentscoreLabel.config(text=f"Opponent score: {opponentScore}")
 
 # Global variables
 
@@ -123,14 +123,16 @@ userLabel.pack(padx = 10, pady=10)
 opponentLabel = tk.Label(root, text=f"Waiting for player", **lblStyles)
 opponentLabel.pack(padx=10, pady=10)
 
+playerscoreLabel = tk.Label(root, text="Player Score: 0", **lblStyles)
+playerscoreLabel.pack(padx = 10, pady=10)
+
+opponentscoreLabel = tk.Label(root, text="Opponent Score: 0", **lblStyles)
+opponentscoreLabel.pack(padx = 10, pady=10)
+
 resultLabel = tk.Label(root, **lblStyles)
 resultLabel.pack(padx=10, pady=10)
 
-#playerscoreLabel = tk.Label(root, text="Player Score: 0", font=("Arial", 12), bg="#f0f0f0")
-#playerscoreLabel.pack(padx = 10, pady=10)
 
-#opponentscoreLabel = tk.Label(root, text="Opponent Score: 0", font=("Arial", 12), bg="#f0f0f0")
-#opponentscoreLabel.pack(padx = 10, pady=10)
 
 # Function Calls
 
