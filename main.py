@@ -95,10 +95,13 @@ def setChoice(playerChoice):
         This is set in this function for now.
         I would like to put this in its own funcition eventually.
     '''
+
+    '''
     random.seed()
     randomChoice = random.choice(["Rock", "Paper", "Scissors"])
     opponentLabel.config(text=f"Opponent: {randomChoice}", font=("Arial", 12), bg="#f0f0f0")
     print(f"NPC choice: {randomChoice}")
+    '''
 
 # Function that I found as an example. I need to modify this.
 def determineWinner(player, opponent):
