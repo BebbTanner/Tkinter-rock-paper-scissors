@@ -1,3 +1,19 @@
+'''
+    playerScore = 0
+    opponentScore = 0
+
+    if result == opponent wins:
+        opponentScore = opponentScore + 1
+    
+    elif result == you win:
+        playerScore = playerScore + 1
+
+    playerscorelabel.config(text=f"Player score: {playerScore}")
+    opponentscorelabel.config(textf"Opponent score: {opponentScore}")
+
+    So I think that if I take this and put it in the setChoice function it should update the score labels.
+'''
+
 # Libraries
 
 import random
@@ -94,10 +110,10 @@ opponentLabel.pack(padx=10, pady=10)
 resultLabel = tk.Label(root, font=("Arial", 12), bg="#f0f0f0")
 resultLabel.pack(padx=10, pady=10)
 
-#playerscoreLabel = tk.Label(root, text="Player Score: ", font=("Arial", 12), bg="#f0f0f0")
+#playerscoreLabel = tk.Label(root, text="Player Score: 0", font=("Arial", 12), bg="#f0f0f0")
 #playerscoreLabel.pack(padx = 10, pady=10)
 
-#opponentscoreLabel = tk.Label(root, text="Opponent Score: ", font=("Arial", 12), bg="#f0f0f0")
+#opponentscoreLabel = tk.Label(root, text="Opponent Score: 0", font=("Arial", 12), bg="#f0f0f0")
 #opponentscoreLabel.pack(padx = 10, pady=10)
 
 # Function Calls
