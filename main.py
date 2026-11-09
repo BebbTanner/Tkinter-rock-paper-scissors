@@ -40,8 +40,7 @@ def opponentChoice():
     choices = ["Rock", "Paper", "Scissors"]
     random_choice = random.choice(choices)
 
-    #opponentLabel.config(text=f"Opponent: {random_choice}")
-    print(f"NPC choice: {random_choice}")
+    opponentLabel.config(text=f"Opponent choice: {random_choice}")
 
     return random_choice
 
@@ -49,11 +48,9 @@ def opponentChoice():
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
     userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
-    print(f"Player: {userChoice.get()}") 
 
     currentChoice = userChoice.get()
     npcChoice = opponentChoice()
-
     result = determineWinner(currentChoice, npcChoice)
 
     print(result)
@@ -92,8 +89,8 @@ scissorsButton.pack(side="left", fill="y")
 userLabel = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
 userLabel.pack(padx = 10, pady=10)
 
-#opponentLabel = tk.Label(root, text=f"Opponent choice: {opponentChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
-#opponentLabel.pack(padx=10, pady=10)
+opponentLabel = tk.Label(root, text=f"Opponent choice: waiting for player", font=("Arial", 12), bg="#f0f0f0")
+opponentLabel.pack(padx=10, pady=10)
 
 #playerscoreLabel = tk.Label(root, text="Player Score: ", font=("Arial", 12), bg="#f0f0f0")
 #playerscoreLabel.pack(padx = 10, pady=10)
