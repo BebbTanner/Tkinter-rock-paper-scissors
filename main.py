@@ -96,8 +96,12 @@ btnStyles = {
     "activeforeground": "white",
     "bd": 0,
     "padx": 20, 
-    "font": ("Arial", 11, "bold"),
+    "font": ("Arial", 12, "bold"),
     "cursor": "hand2"
+}
+
+lblStyles = {
+    "font":("Arial", 12)
 }
 
 # Buttons
@@ -113,13 +117,13 @@ scissorsButton.pack(side="left", fill="y")
 
 # Labels
 
-userLabel = tk.Label(root, text=f"Make a choice {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
+userLabel = tk.Label(root, text=f"Make a choice {userChoice.get()}", **lblStyles)
 userLabel.pack(padx = 10, pady=10)
 
-opponentLabel = tk.Label(root, text=f"Waiting for player", font=("Arial", 12), bg="#f0f0f0")
+opponentLabel = tk.Label(root, text=f"Waiting for player", **lblStyles)
 opponentLabel.pack(padx=10, pady=10)
 
-resultLabel = tk.Label(root, font=("Arial", 12), bg="#f0f0f0")
+resultLabel = tk.Label(root, **lblStyles)
 resultLabel.pack(padx=10, pady=10)
 
 #playerscoreLabel = tk.Label(root, text="Player Score: 0", font=("Arial", 12), bg="#f0f0f0")
