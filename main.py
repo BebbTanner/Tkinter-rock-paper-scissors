@@ -93,15 +93,21 @@ def setChoice(playerChoice):
     opponentLabel.config(text=f"Opponent: {randomChoice}", font=("Arial", 12), bg="#f0f0f0")
     print(f"NPC choice: {randomChoice}")
 
-# Playing around with an example that I found
-# I think that I can use these to create a frame to put items in, so that they can be side by side.
-'''
-rectangle_1 = tk.Label(root, text="Rectangle 1", bg="green", fg="white")
-rectangle_1.pack(ipadx=10, ipady=10, side="left", expand=True, fill="both")
+# Function that I found as an example. I need to modify this.
+def determineWinner(player, opponent):
+    if player == opponent:
+        return "it's a tie"
 
-rectangle_2 = tk.Label(root, text="Rectangle 2", bg="red", fg="white")
-rectangle_2.pack(ipadx=10, ipady=10, side="left", expand=True, fill="both")
-'''
+    winningRule = {
+        "Rock":"Scissors",
+        "Scissors":"Paper",
+        "Paper": "Rock"
+    }
+
+    if winningRule[player] == opponent:
+        return "You win"
+    else:
+        return "Opponent wins"
 
 # Function Calls
 
