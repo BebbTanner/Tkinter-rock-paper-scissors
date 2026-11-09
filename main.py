@@ -17,7 +17,7 @@ navbar.pack_propagate(False)
 navContainer = tk.Frame(navbar, bg = "#2c3e50")
 navContainer.pack(expand = True, fill = "y")
 
-# Function
+# Functions
 
 # Determine winner function
 def determineWinner(player, opponent):
@@ -35,7 +35,7 @@ def determineWinner(player, opponent):
     else:
         return "Opponent wins"
 
-# Opponent choice?
+# Opponent choice
 def opponentChoice():
     choices = ["Rock", "Paper", "Scissors"]
     random_choice = random.choice(choices)
@@ -44,7 +44,7 @@ def opponentChoice():
 
     return random_choice
 
-# Player choice?
+# Player choice
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
     userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
@@ -55,10 +55,9 @@ def setChoice(playerChoice):
 
     print(result)
 
-
 # Global variables
 
-userChoice = tk.StringVar(value="None Selected")
+userChoice = tk.StringVar()
 
 # Button Styling
 
