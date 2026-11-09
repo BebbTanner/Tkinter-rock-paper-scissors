@@ -71,6 +71,18 @@ def setChoice(playerChoice):
 
     resultLabel.config(text=result)
 
+    playerScore = 0
+    opponentScore = 0
+
+    if result == 'Opponent wins':
+        opponentScore = opponentScore + 1
+    
+    elif result == 'You win':
+        playerScore = playerScore + 1
+
+    print(f"Player: {playerScore}")
+    print(f"NPC: {opponentScore}")
+
 # Global variables
 
 userChoice = tk.StringVar()
