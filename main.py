@@ -61,15 +61,16 @@ def setChoice(playerChoice):
 
     updateScore(result)
 
+
 # Scoring function
 def updateScore(result):
+    global playerScore,opponentScore
 
     '''
         So I set this to none and with each update of the loop it kept it as None.
         This makes me wonder if this is not updating correctly.
     '''
-    playerScore = 0
-    opponentScore = 0
+
 
     if result == 'Opponent wins':
         opponentScore = opponentScore + 1
@@ -85,6 +86,8 @@ def updateScore(result):
 # Global variables
 
 userChoice = tk.StringVar()
+playerScore = 0
+opponentScore = 0
 
 
 
