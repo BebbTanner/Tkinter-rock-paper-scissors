@@ -59,6 +59,11 @@ def setChoice(playerChoice):
     npcChoice = opponentChoice()
     result = determineWinner(currentChoice, npcChoice)
 
+    updateScore(result)
+
+# Scoring function
+def updateScore(result):
+
     playerScore = 0
     opponentScore = 0
 
