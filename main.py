@@ -55,8 +55,6 @@ def setChoice(playerChoice):
     npcChoice = opponentChoice()
     result = determineWinner(currentChoice, npcChoice)
 
-    resultLabel.config(text=result)
-
     playerScore = 0
     opponentScore = 0
 
@@ -122,9 +120,6 @@ playerscoreLabel.pack(padx = 10, pady=10)
 
 opponentscoreLabel = tk.Label(root, text="Opponent Score: 0", **lblStyles)
 opponentscoreLabel.pack(padx = 10, pady=10)
-
-resultLabel = tk.Label(root, **lblStyles)
-resultLabel.pack(padx=10, pady=10)
 
 
 
