@@ -1,3 +1,7 @@
+'''
+    Maybe the update score needs to be its own function?
+'''
+
 # Libraries
 
 import random
