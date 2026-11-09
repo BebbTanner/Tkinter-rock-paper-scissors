@@ -53,7 +53,7 @@ def setChoice(playerChoice):
     npcChoice = opponentChoice()
     result = determineWinner(currentChoice, npcChoice)
 
-    print(result)
+    resultLabel.config(text=result)
 
 # Global variables
 
@@ -90,6 +90,9 @@ userLabel.pack(padx = 10, pady=10)
 
 opponentLabel = tk.Label(root, text=f"Waiting for player", font=("Arial", 12), bg="#f0f0f0")
 opponentLabel.pack(padx=10, pady=10)
+
+resultLabel = tk.Label(root, font=("Arial", 12), bg="#f0f0f0")
+resultLabel.pack(padx=10, pady=10)
 
 #playerscoreLabel = tk.Label(root, text="Player Score: ", font=("Arial", 12), bg="#f0f0f0")
 #playerscoreLabel.pack(padx = 10, pady=10)
