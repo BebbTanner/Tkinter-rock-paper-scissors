@@ -61,17 +61,17 @@ scissorsButton.pack(side="left", fill="y")
 
 # Labels
 
-#userLabel = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
-#userLabel.pack(padx = 10, pady=10)
+userLabel = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
+userLabel.pack(padx = 10, pady=10)
 
 opponentLabel = tk.Label(root, text=f"Opponent choice: {opponentChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
 opponentLabel.pack(padx=10, pady=10)
 
-#playerscoreLabel = tk.Label(root, text="Player Score: ", font=("Arial", 12), bg="#f0f0f0")
-#playerscoreLabel.pack(padx = 10, pady=10)
+playerscoreLabel = tk.Label(root, text="Player Score: ", font=("Arial", 12), bg="#f0f0f0")
+playerscoreLabel.pack(padx = 10, pady=10)
 
-#opponentscoreLabel = tk.Label(root, text="Opponent Score: ", font=("Arial", 12), bg="#f0f0f0")
-#opponentscoreLabel.pack(padx = 10, pady=10)
+opponentscoreLabel = tk.Label(root, text="Opponent Score: ", font=("Arial", 12), bg="#f0f0f0")
+opponentscoreLabel.pack(padx = 10, pady=10)
 
 # Function definitions
 
@@ -86,19 +86,6 @@ opponentLabel.pack(padx=10, pady=10)
     
     on paper this all makes since, but keep in mind I might have to do some resturcturing of this code so the end result might look different.
 '''
-def getOpponentChoice():
-    random.seed()
-
-    choices = ["Rock", "Paper", "Scissors"]
-    randomChoice = random.choice(choices)
-
-    opponentLabel.config(
-        text = f"{randomChoice}"
-    )
-
-    print(f"NPC: {randomChoice}")
-
-    return randomChoice
 
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
@@ -109,15 +96,14 @@ def setChoice(playerChoice):
         This is set in this function for now.
         I would like to put this in its own funcition eventually.
     '''
-
-    '''
     random.seed()
     randomChoice = random.choice(["Rock", "Paper", "Scissors"])
     opponentLabel.config(text=f"Opponent: {randomChoice}", font=("Arial", 12), bg="#f0f0f0")
     print(f"NPC choice: {randomChoice}")
-    '''
+    
 
 # Function that I found as an example. I need to modify this.
+
 def determineWinner(player, opponent):
     if player == opponent:
         return "it's a tie"
