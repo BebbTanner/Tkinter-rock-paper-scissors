@@ -2,7 +2,7 @@
 
 import random
 import tkinter as tk
-from tkinter import Button
+from tkinter import *
 
 # UI setup
 
