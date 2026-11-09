@@ -78,6 +78,13 @@ opponentscoreLabel.pack(padx = 10, pady=10)
 '''
     What are the two variables that we need to be comparing in order to determine the winner?
     I believe that it should be playerChoice and randomChoice.
+
+    So going back to last week, I think that in order to get this to work I need to seperate the setChoice functions.
+    I need one for player choice and one for opponent choice.
+
+    Then, those two funcitons need to output to a global variable so that I can then kick them into the determine winner function.
+    
+    on paper this all makes since, but keep in mind I might have to do some resturcturing of this code so the end result might look different.
 '''
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
