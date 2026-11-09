@@ -4,6 +4,8 @@
 
     From what I understand I can create frames to place onto the main window and then place my content in those frames.
     This should help me with general layout for the root window.
+
+    So I think I need to set my functions at the top of the file in order for this to work correctly.
 '''
 
 # Libraries
