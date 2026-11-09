@@ -1,7 +1,3 @@
-'''
-    Maybe the update score needs to be its own function?
-'''
-
 # Libraries
 
 import random
@@ -65,12 +61,6 @@ def setChoice(playerChoice):
 # Scoring function
 def updateScore(result):
     global playerScore,opponentScore
-
-    '''
-        So I set this to none and with each update of the loop it kept it as None.
-        This makes me wonder if this is not updating correctly.
-    '''
-
 
     if result == 'Opponent wins':
         opponentScore = opponentScore + 1
