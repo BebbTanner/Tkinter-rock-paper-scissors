@@ -1,13 +1,3 @@
-'''
-    This now allows the user to make a choice and updates the NPC choice.
-    Now I need to make it so that these two ansewrs get compared.
-
-    From what I understand I can create frames to place onto the main window and then place my content in those frames.
-    This should help me with general layout for the root window.
-
-    So I think I need to set my functions at the top of the file in order for this to work correctly.
-'''
-
 # Libraries
 
 import random
@@ -50,7 +40,7 @@ def opponentChoice():
     choices = ["Rock", "Paper", "Scissors"]
     random_choice = random.choice(choices)
 
-    opponentLabel.config(text=f"Opponent: {random_choice}")
+    #opponentLabel.config(text=f"Opponent: {random_choice}")
     print(f"NPC choice: {random_choice}")
 
     return random_choice
@@ -63,14 +53,14 @@ def setChoice(playerChoice):
 
     currentChoice = userChoice.get()
     npcChoice = opponentChoice()
-    result = determineWinner()
+
+    result = determineWinner(currentChoice, npcChoice)
 
     print(result)
 
 
 # Global variables
 
-opponentChoice = tk.StringVar(value = "Waiting for player choice")
 userChoice = tk.StringVar(value="None Selected")
 
 # Button Styling
@@ -102,14 +92,14 @@ scissorsButton.pack(side="left", fill="y")
 userLabel = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
 userLabel.pack(padx = 10, pady=10)
 
-opponentLabel = tk.Label(root, text=f"Opponent choice: {opponentChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
-opponentLabel.pack(padx=10, pady=10)
+#opponentLabel = tk.Label(root, text=f"Opponent choice: {opponentChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
+#opponentLabel.pack(padx=10, pady=10)
 
-playerscoreLabel = tk.Label(root, text="Player Score: ", font=("Arial", 12), bg="#f0f0f0")
-playerscoreLabel.pack(padx = 10, pady=10)
+#playerscoreLabel = tk.Label(root, text="Player Score: ", font=("Arial", 12), bg="#f0f0f0")
+#playerscoreLabel.pack(padx = 10, pady=10)
 
-opponentscoreLabel = tk.Label(root, text="Opponent Score: ", font=("Arial", 12), bg="#f0f0f0")
-opponentscoreLabel.pack(padx = 10, pady=10)
+#opponentscoreLabel = tk.Label(root, text="Opponent Score: ", font=("Arial", 12), bg="#f0f0f0")
+#opponentscoreLabel.pack(padx = 10, pady=10)
 
 # Function Calls
 
