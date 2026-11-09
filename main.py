@@ -86,6 +86,10 @@ opponentscoreLabel.pack(padx = 10, pady=10)
     
     on paper this all makes since, but keep in mind I might have to do some resturcturing of this code so the end result might look different.
 '''
+def getOpponentChoice():
+    choices = ["Rock", "Paper", "Scissors"]
+    randomChoice = random.choice(choices)
+
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
     userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
