@@ -21,16 +21,33 @@ root.title("Rock, Paper, Scissors")
 root.geometry("500x400")
 root.configure(bg = "#f0f0f0")
 
-# Frames
+# Navbar properties
 
 navbar = tk.Frame(root, bg = "#2c3e50", height = 50)
 navbar.pack(side = "top", fill = "x")
 navbar.pack_propagate(False)
-
-# Nav Centering
-
 navContainer = tk.Frame(navbar, bg = "#2c3e50")
 navContainer.pack(expand = True, fill = "y")
+
+# Function relocation?
+
+# Determine winner function
+def determineWinner(player, opponent):
+    if player == opponent:
+        return "it's a tie"
+
+    winningRule = {
+        "Rock":"Scissors",
+        "Scissors":"Paper",
+        "Paper": "Rock"
+    }
+
+    if winningRule[player] == opponent:
+        return "You win"
+    else:
+        return "Opponent wins"
+
+# Opponent choice?
 
 # Global variables
 
@@ -103,24 +120,6 @@ def setChoice(playerChoice):
     opponentLabel.config(text=f"Opponent: {randomChoice}", font=("Arial", 12), bg="#f0f0f0")
     print(f"NPC choice: {randomChoice}")
     
-
-# Function that I found as an example. I need to modify this.
-
-def determineWinner(player, opponent):
-    if player == opponent:
-        return "it's a tie"
-
-    winningRule = {
-        "Rock":"Scissors",
-        "Scissors":"Paper",
-        "Paper": "Rock"
-    }
-
-    if winningRule[player] == opponent:
-        return "You win"
-    else:
-        return "Opponent wins"
-
 # Function Calls
 
 root.mainloop()
