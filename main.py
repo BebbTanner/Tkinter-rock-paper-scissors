@@ -49,13 +49,20 @@ def determineWinner(player, opponent):
 
 # Opponent choice?
 def OpponentChoice():
-    choices = ["Rock", "Paper", "Scissors"]]
+    choices = ["Rock", "Paper", "Scissors"]
     randomChoice = random.choice(choices)
 
     opponentLabel.config(text=f"{randomChoice}")
     print(f"NPC: {randomChoice}")
 
     return randomChoice
+
+# Player choice?
+def setChoice(playerChoice):
+    userChoice.set(playerChoice)
+    userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
+    print(f"Player: {userChoice.get()}") 
+
 
 # Global variables
 
@@ -114,20 +121,13 @@ opponentscoreLabel.pack(padx = 10, pady=10)
     on paper this all makes since, but keep in mind I might have to do some resturcturing of this code so the end result might look different.
 '''
 
-def setChoice(playerChoice):
-    userChoice.set(playerChoice)
-    userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
-    print(f"User chose: {userChoice.get()}") 
-
-    '''
-        This is set in this function for now.
-        I would like to put this in its own funcition eventually.
-    '''
+'''
     random.seed()
     randomChoice = random.choice(["Rock", "Paper", "Scissors"])
     opponentLabel.config(text=f"Opponent: {randomChoice}", font=("Arial", 12), bg="#f0f0f0")
     print(f"NPC choice: {randomChoice}")
-    
+'''
+
 # Function Calls
 
 root.mainloop()
