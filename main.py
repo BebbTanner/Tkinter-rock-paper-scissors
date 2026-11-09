@@ -48,20 +48,26 @@ def determineWinner(player, opponent):
         return "Opponent wins"
 
 # Opponent choice?
-def OpponentChoice():
+def opponentChoice():
     choices = ["Rock", "Paper", "Scissors"]
-    randomChoice = random.choice(choices)
+    random_choice = random.choice(choices)
 
-    opponentLabel.config(text=f"{randomChoice}")
-    print(f"NPC: {randomChoice}")
+    opponentLabel.config(text=f"Opponent: {random_choice}")
+    print(f"NPC choice: {random_choice}")
 
-    return randomChoice
+    return random_choice
 
 # Player choice?
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
     userLabel.config(text=f"Player Choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
     print(f"Player: {userChoice.get()}") 
+
+    currentChoice = userChoice.get()
+    npcChoice = opponentChoice()
+    result = determineWinner()
+
+    print(result)
 
 
 # Global variables
