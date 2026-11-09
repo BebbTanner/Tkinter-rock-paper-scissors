@@ -85,10 +85,10 @@ scissorsButton.pack(side="left", fill="y")
 
 # Labels
 
-userLabel = tk.Label(root, text=f"Make a choice: {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
+userLabel = tk.Label(root, text=f"Make a choice {userChoice.get()}", font=("Arial", 12), bg="#f0f0f0")
 userLabel.pack(padx = 10, pady=10)
 
-opponentLabel = tk.Label(root, text=f"Opponent choice: waiting for player", font=("Arial", 12), bg="#f0f0f0")
+opponentLabel = tk.Label(root, text=f"Waiting for player", font=("Arial", 12), bg="#f0f0f0")
 opponentLabel.pack(padx=10, pady=10)
 
 #playerscoreLabel = tk.Label(root, text="Player Score: ", font=("Arial", 12), bg="#f0f0f0")
