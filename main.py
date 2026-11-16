@@ -77,9 +77,9 @@ def updateScore(result):
 
     float(playerScore)
     float(opponentScore)
+    ratio = playerScore / opponentScore
 
-    ratio = (playerScore / opponentScore)
-    print(ratio)
+    ratioLabel.config(text=f"W/L: {ratio:.2f}")
 
   
 
