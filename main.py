@@ -75,6 +75,12 @@ def updateScore(result):
     playerscoreLabel.config(text=f"Player score: {playerScore}")
     opponentscoreLabel.config(text=f"Opponent score: {opponentScore}")
 
+    float(playerScore)
+    float(opponentScore)
+
+    ratio = (playerScore / opponentScore)
+    print(ratio)
+
   
 
 # Global variables
