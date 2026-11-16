@@ -6,6 +6,7 @@
 
 import random
 import tkinter as tk
+import customtkinter as ctk
 from tkinter import *
 
 # UI setup
