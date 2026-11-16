@@ -11,7 +11,7 @@ from tkinter import *
 
 # UI setup
 
-root = tk.Tk()
+root = ctk.CTk()
 root.title("Rock, Paper, Scissors")
 root.geometry("500x400")
 root.configure(bg = "#a9a9a9")
