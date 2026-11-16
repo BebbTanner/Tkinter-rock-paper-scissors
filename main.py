@@ -80,7 +80,7 @@ def updateScore(result):
     float(opponentScore)
     ratio = playerScore / opponentScore
 
-    ratioLabel.config(text=f"W/L: {ratio:.2f}")
+    ratioLabel.configure(text=f"W/L: {ratio:.2f}")
 
   
 
@@ -139,7 +139,7 @@ playerscoreLabel.pack(padx = 10, pady=10)
 opponentscoreLabel = tk.Label(root, text="Opponent Score: 0", **lblStyles)
 opponentscoreLabel.pack(padx = 10, pady=10)
 
-ratioLabel = tk.Label(root, text="W/L: ", **lblStyles)
+ratioLabel = ctk.CTkLabel(root, text="W/L: ")
 ratioLabel.pack(padx=10, pady=10)
 
 # Function Calls
