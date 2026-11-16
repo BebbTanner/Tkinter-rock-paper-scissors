@@ -54,7 +54,7 @@ def opponentChoice():
 # Player choice
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
-    userLabel.config(text=f"Player Choice: {userChoice.get()}", **lblStyles)
+    userLabel.configure(text=f"Player Choice: {userChoice.get()}",)
 
     currentChoice = userChoice.get()
     npcChoice = opponentChoice()
@@ -73,8 +73,8 @@ def updateScore(result):
     elif result == 'You win':
         playerScore = playerScore + 1
 
-    playerscoreLabel.config(text=f"Player score: {playerScore}")
-    opponentscoreLabel.config(text=f"Opponent score: {opponentScore}")
+    playerscoreLabel.configure(text=f"Player score: {playerScore}")
+    opponentscoreLabel.configure(text=f"Opponent score: {opponentScore}")
 
     float(playerScore)
     float(opponentScore)
@@ -127,7 +127,10 @@ scissorsButton.pack(side="left", fill="y")
 
 # Labels
 
-userLabel = tk.Label(root, text=f"Make a choice {userChoice.get()}", **lblStyles)
+userLabel = ctk.CTkLabel(
+    root, 
+    text=f"Make a choice {userChoice.get()}", 
+)
 userLabel.pack(padx = 10, pady=10)
 
 opponentLabel = ctk.CTkLabel(
