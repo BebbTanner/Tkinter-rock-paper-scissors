@@ -1,3 +1,7 @@
+'''
+    So I think for the W/L Ratio the variables that I need to be looking at is the playerScore and the opponentScore variables.
+'''
+
 # Libraries
 
 import random
