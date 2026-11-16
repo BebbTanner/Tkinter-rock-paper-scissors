@@ -128,7 +128,8 @@ playerscoreLabel.pack(padx = 10, pady=10)
 opponentscoreLabel = tk.Label(root, text="Opponent Score: 0", **lblStyles)
 opponentscoreLabel.pack(padx = 10, pady=10)
 
-
+winRatioLabel = tk.Label(root, text="W/L Ratio: ", **lblStyles)
+winRatioLabel.pack(padx=10, pady=10)
 
 # Function Calls
 
