@@ -98,8 +98,7 @@ btnStyles = {
 }
 
 lblStyles = {
-    "font":("Arial", 12),
-    "fg_color": "#a9a9a9"
+    "font":("Arial", 18),
 }
 
 
@@ -149,44 +148,56 @@ scissorsButton.pack(
 userLabel = ctk.CTkLabel(
     root, 
     text=f"Make a choice {userChoice.get()}", 
+    **lblStyles
 )
-userLabel.pack(padx = 10, pady=10)
+userLabel.pack(
+    padx = 10, 
+    pady=10)
+
 
 opponentLabel = ctk.CTkLabel(
     root, 
     text=f"Waiting for player", 
+    **lblStyles
 )
 opponentLabel.pack(
     padx=10, 
     pady=10
 )
 
+
 playerscoreLabel = ctk.CTkLabel(
     root, 
-    text="Player Score: 0", 
+    text="Player Score: 0",
+    **lblStyles 
 )
 playerscoreLabel.pack(
     padx = 10, 
     pady=10
 )
 
+
 opponentscoreLabel = ctk.CTkLabel(
     root, 
     text="Opponent Score: 0", 
+    **lblStyles
 )
 opponentscoreLabel.pack(
     padx = 10, 
     pady=10
 )
 
+
 ratioLabel = ctk.CTkLabel(
     root, 
-    text="W/L: "
-    )
+    text="W/L: ",
+    **lblStyles
+)
 ratioLabel.pack(
     padx=10, 
     pady=10
 )
+
 
 # Function Calls
 
