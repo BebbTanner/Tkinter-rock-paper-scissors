@@ -1,7 +1,3 @@
-'''
-    So I think for the W/L Ratio the variables that I need to be looking at is the playerScore and the opponentScore variables.
-'''
-
 # Libraries
 
 import random
@@ -114,14 +110,35 @@ lblStyles = {
 
 # Buttons
 
-rockButton = tk.Button(navContainer, text = "Rock", command= lambda: setChoice("Rock"), **btnStyles)
-rockButton.pack(side="left", fill="y")
+rockButton = ctk.CTkButton(
+    navContainer, 
+    text = "Rock", 
+    command= lambda: setChoice("Rock"), 
+)
+rockButton.pack(
+    side="left", 
+    fill="y"
+)
 
-paperButton = tk.Button(navContainer, text = "Paper", command= lambda: setChoice("Paper"), **btnStyles)
-paperButton.pack(side="left", fill="y")
+paperButton = ctk.CTkButton(
+    navContainer, 
+    text = "Paper", 
+    command= lambda: setChoice("Paper"), 
+)
+paperButton.pack(
+    side="left", 
+    fill="y"
+)
 
-scissorsButton = tk.Button(navContainer, text = "Scissors", command= lambda: setChoice("Scissors"), **btnStyles)
-scissorsButton.pack(side="left", fill="y")
+scissorsButton = ctk.CTkButton(
+    navContainer, 
+    text = "Scissors", 
+    command= lambda: setChoice("Scissors"), 
+)
+scissorsButton.pack(
+    side="left", 
+    fill="y"
+)
 
 
 
