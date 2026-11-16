@@ -133,8 +133,14 @@ userLabel.pack(padx = 10, pady=10)
 opponentLabel = tk.Label(root, text=f"Waiting for player", **lblStyles)
 opponentLabel.pack(padx=10, pady=10)
 
-playerscoreLabel = tk.Label(root, text="Player Score: 0", **lblStyles)
-playerscoreLabel.pack(padx = 10, pady=10)
+playerscoreLabel = ctk.CTkLabel(
+    root, 
+    text="Player Score: 0", 
+)
+playerscoreLabel.pack(
+    padx = 10, 
+    pady=10
+)
 
 opponentscoreLabel = ctk.CTkLabel(
     root, 
