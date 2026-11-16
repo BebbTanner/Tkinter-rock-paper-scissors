@@ -79,7 +79,10 @@ def updateScore(result):
     float(opponentScore)
     ratio = playerScore / opponentScore
 
+    totalGames = playerScore + opponentScore
+
     ratioLabel.configure(text=f"W/L: {ratio:.2f}")
+    gamesPlayed.configure(text=f"Games played: {totalGames}")
 
   
 
@@ -204,7 +207,7 @@ ratioLabel.pack(
 
 gamesPlayed = ctk.CTkLabel(
     root, 
-    text="Games played: ",
+    text="Games played: 0",
     **lblStyles
 )
 gamesPlayed.pack(
