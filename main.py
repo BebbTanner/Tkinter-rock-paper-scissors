@@ -1,5 +1,10 @@
 '''
     For the next steps I will be attempting to change the layout that way everything is not just stacked on top of each other.
+
+    You know what, I have the total games played setup incorrectly.
+    If the two players tie it will not increament the total number of games played.
+    So I need to redesign that loop.
+    I will deal with this later.
 '''
 
 # Libraries
