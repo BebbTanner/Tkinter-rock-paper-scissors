@@ -1,3 +1,7 @@
+'''
+    For the next steps I will be attempting to change the layout that way everything is not just stacked on top of each other.
+'''
+
 # Libraries
 
 import random
