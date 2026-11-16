@@ -202,6 +202,16 @@ ratioLabel.pack(
     pady=10
 )
 
+gamesPlayed = ctk.CTkLabel(
+    root, 
+    text="Games played: ",
+    **lblStyles
+)
+gamesPlayed.pack(
+    padx=10, 
+    pady=10 
+)
+
 
 # Function Calls
 
