@@ -136,15 +136,23 @@ opponentLabel.pack(padx=10, pady=10)
 playerscoreLabel = tk.Label(root, text="Player Score: 0", **lblStyles)
 playerscoreLabel.pack(padx = 10, pady=10)
 
-opponentscoreLabel = tk.Label(root, text="Opponent Score: 0", **lblStyles)
-opponentscoreLabel.pack(padx = 10, pady=10)
+opponentscoreLabel = ctk.CTkLabel(
+    root, 
+    text="Opponent Score: 0", 
+)
+opponentscoreLabel.pack(
+    padx = 10, 
+    pady=10
+)
 
 ratioLabel = ctk.CTkLabel(
     root, 
     text="W/L: "
     )
-
-ratioLabel.pack(padx=10, pady=10)
+ratioLabel.pack(
+    padx=10, 
+    pady=10
+)
 
 # Function Calls
 
