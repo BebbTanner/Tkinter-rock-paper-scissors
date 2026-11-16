@@ -1,7 +1,6 @@
 # Libraries
 
 import random
-import tkinter as tk
 import customtkinter as ctk
 from tkinter import *
 
@@ -12,10 +11,10 @@ root.title("Rock, Paper, Scissors")
 root.geometry("500x400")
 root.configure(bg = "#a9a9a9")
 
-navbar = tk.Frame(root, bg = "#2c3e50", height = 50)
+navbar = ctk.CTkFrame(root, fg_color = "#2c3e50", height = 50)
 navbar.pack(side = "top", fill = "x")
 navbar.pack_propagate(False)
-navContainer = tk.Frame(navbar, bg = "#2c3e50")
+navContainer = ctk.CTkFrame(navbar, fg_color = "#2c3e50")
 navContainer.pack(expand = True, fill = "y")
 
 
@@ -82,7 +81,7 @@ def updateScore(result):
 
 # Global variables
 
-userChoice = tk.StringVar()
+userChoice = ctk.StringVar()
 playerScore = 0
 opponentScore = 0
 
@@ -96,7 +95,7 @@ btnStyles = {
     "activebackground": "#34495e",
     "activeforeground": "white",
     "bd": 0,
-    "padx": 20, 
+    "padx": 10, 
     "font": ("Arial", 12, "bold"),
     "cursor": "hand2"
 }
