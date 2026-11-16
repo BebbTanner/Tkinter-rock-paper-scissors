@@ -47,7 +47,7 @@ def opponentChoice():
     choices = ["Rock", "Paper", "Scissors"]
     random_choice = random.choice(choices)
 
-    opponentLabel.config(text=f"Opponent choice: {random_choice}")
+    opponentLabel.configure(text=f"Opponent choice: {random_choice}")
 
     return random_choice
 
@@ -130,8 +130,14 @@ scissorsButton.pack(side="left", fill="y")
 userLabel = tk.Label(root, text=f"Make a choice {userChoice.get()}", **lblStyles)
 userLabel.pack(padx = 10, pady=10)
 
-opponentLabel = tk.Label(root, text=f"Waiting for player", **lblStyles)
-opponentLabel.pack(padx=10, pady=10)
+opponentLabel = ctk.CTkLabel(
+    root, 
+    text=f"Waiting for player", 
+)
+opponentLabel.pack(
+    padx=10, 
+    pady=10
+)
 
 playerscoreLabel = ctk.CTkLabel(
     root, 
