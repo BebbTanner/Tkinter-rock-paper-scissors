@@ -102,9 +102,9 @@ opponentScore = 0
 # Button Styling
 
 btnStyles = {
-    "fg_color": "#2b8a3e",
+    "fg_color": "#A73535",
     "text_color": "white",
-    "hover_color":"#237032",
+    "hover_color":"#702323",
     "font": ("Arial", 12, "bold"),
     "cursor": "hand2"
 }
@@ -121,7 +121,7 @@ rockButton = ctk.CTkButton(
     navContainer, 
     text = "Rock", 
     command= lambda: setChoice("Rock"), 
-    **btnStyles
+    **btnStyles,
 )
 rockButton.pack(
     side="left",
