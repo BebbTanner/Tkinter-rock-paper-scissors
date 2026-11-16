@@ -90,19 +90,16 @@ opponentScore = 0
 # Button Styling
 
 btnStyles = {
-    "bg": "#2c3e50",
-    "fg": "white",
-    "activebackground": "#34495e",
-    "activeforeground": "white",
-    "bd": 0,
-    "padx": 10, 
+    "fg_color": "#2b8a3e",
+    "text_color": "white",
+    "hover_color":"#237032",
     "font": ("Arial", 12, "bold"),
     "cursor": "hand2"
 }
 
 lblStyles = {
     "font":("Arial", 12),
-    "bg": "#a9a9a9"
+    "fg_color": "#a9a9a9"
 }
 
 
@@ -113,30 +110,36 @@ rockButton = ctk.CTkButton(
     navContainer, 
     text = "Rock", 
     command= lambda: setChoice("Rock"), 
+    **btnStyles
 )
 rockButton.pack(
-    side="left", 
-    fill="y"
+    side="left",
+    padx=10, 
+    pady=10
 )
 
 paperButton = ctk.CTkButton(
     navContainer, 
     text = "Paper", 
     command= lambda: setChoice("Paper"), 
+    **btnStyles
 )
 paperButton.pack(
-    side="left", 
-    fill="y"
+    side="left",
+    padx=10, 
+    pady=10
 )
 
 scissorsButton = ctk.CTkButton(
     navContainer, 
     text = "Scissors", 
     command= lambda: setChoice("Scissors"), 
+    **btnStyles
 )
 scissorsButton.pack(
-    side="left", 
-    fill="y"
+    side="left",
+    padx=10, 
+    pady=10
 )
 
 
