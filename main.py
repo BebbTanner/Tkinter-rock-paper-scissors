@@ -56,6 +56,12 @@ class frameOne(ctk.CTkFrame):
         self.choiceLabel = ctk.CTkLabel(self, text="test")
         self.choiceLabel.grid(row=0, column=1, padx=10, pady=10)
 
+        self.opponentLabel = ctk.CTkLabel(self, text="Opponent Choice: ")
+        self.opponentLabel.grid(row=1, column=0, padx=10, pady=10)
+
+        self.oppChoiceLabel = ctk.CTkLabel(self, text="test")
+        self.oppChoiceLabel.grid(row=1, column=1, padx=10, pady=10)
+
 
 
 class frameTwo(ctk.CTkFrame):
