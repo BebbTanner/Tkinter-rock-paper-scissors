@@ -45,6 +45,9 @@ class myFrame(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
 
+        self.grid_columnconfigure((0,1,2), weight=1)
+        self.grid_rowconfigure(1, weight=1)
+
 
 
 # 2. Define the main application window
@@ -55,12 +58,17 @@ class App(ctk.CTk):
         self.title("Rock, Paper, Scissors")
         self.geometry("500x400")
 
-        # Configure grid so the frame expands properly
+        self.grid_rowconfigure(1, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+
         self.grid_rowconfigure(1, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
         self.navbar = Navbar(self)
         self.navbar.grid(row=0, column=0, sticky="ew")
+
+        self.game_frame = myFrame(self, corner_radius=12)
+        self.game_frame.grid(row=1, column=0, padx=20, pady=20, sticky="nsew")
 
 
 
