@@ -41,7 +41,7 @@ class Navbar(ctk.CTkFrame):
 
 
 # This is a class for a frame that I plan on using in the main app.
-class myFrame(ctk.CTkFrame):
+class frameOne(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
 
@@ -67,7 +67,7 @@ class App(ctk.CTk):
         self.navbar = Navbar(self)
         self.navbar.grid(row=0, column=0, sticky="ew")
 
-        self.game_frame = myFrame(self, corner_radius=12)
+        self.game_frame = frameOne(self, corner_radius=12)
         self.game_frame.grid(row=1, column=0, padx=20, pady=20, sticky="nsew")
 
 
