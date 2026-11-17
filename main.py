@@ -1,5 +1,5 @@
 '''
-    The 2.0 branch and the 1.0 branch have been seperated.
+    2.0 branch
 '''
 
 # Libraries
