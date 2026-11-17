@@ -29,11 +29,8 @@ class Navbar(ctk.CTkFrame):
         self.navContainer.pack(expand=True, fill="y")
 
         # --- Add your navbar buttons/labels inside self.nav_container below ---
-        # Example:
-        # self.home_btn = ctk.CTkButton(self.nav_container, text="Home")
-        # self.home_btn.pack(side="left", padx=10)
-
-        # So eventually, the rock, paper, and scissors buttons will need to be relocated to this class.
+        self.rockButton = ctk.CTkButton(self.navContainer, text="Rock", command= lambda: setChoice("Rock"), **btnStyles)
+        self.rockButton.pack(    side="left", padx=10, pady=10)
 
 
 
@@ -126,12 +123,14 @@ def opponentChoice():
 def setChoice(playerChoice):
     userChoice.set(playerChoice)
     userLabel.configure(text=f"Player Choice: {userChoice.get()}",)
-
+    
     currentChoice = userChoice.get()
     npcChoice = opponentChoice()
     result = determineWinner(currentChoice, npcChoice)
 
     updateScore(result)
+
+    
 
 
 
@@ -290,7 +289,7 @@ gamesPlayed.pack(
 
 
 # Function Calls
-root.mainloop()
+#root.mainloop()
 
-#app = App()
-#app.mainloop()
+app = App()
+app.mainloop()
