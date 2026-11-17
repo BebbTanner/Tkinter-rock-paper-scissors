@@ -1,10 +1,7 @@
 '''
-    For the next steps I will be attempting to change the layout that way everything is not just stacked on top of each other.
-
-    You know what, I have the total games played setup incorrectly.
-    If the two players tie it will not increament the total number of games played.
-    So I need to redesign that loop.
-    I will deal with this later.
+    Right now I am trying to convert the legacy layout to the new class based system layout.
+    This should help with building out the layout that I actually want. 
+    I am using the example that I uploaded earlier.
 '''
 
 # Libraries
@@ -160,7 +157,6 @@ def updateScore(result):
     totalGames = playerScore + opponentScore
 
     ratioLabel.configure(text=f"W/L: {ratio:.2f}")
-    gamesPlayed.configure(text=f"Games played: {totalGames}")
 
   
 
@@ -280,16 +276,6 @@ ratioLabel = ctk.CTkLabel(
 ratioLabel.pack(
     padx=10, 
     pady=10
-)
-
-gamesPlayed = ctk.CTkLabel(
-    root, 
-    text="Games played: 0",
-    **lblStyles
-)
-gamesPlayed.pack(
-    padx=10, 
-    pady=10 
 )
 
 
