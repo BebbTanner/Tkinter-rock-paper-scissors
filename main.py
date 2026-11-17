@@ -13,6 +13,13 @@ import random
 import customtkinter as ctk
 from tkinter import *
 
+# Navbar Class
+class Navbar(ctk.CTkFrame):
+    def __init__(self, master, **kwargs):
+
+        
+
+
 # This is a class for a frame that I plan on using in the main app.
 class MyFrame(ctk.CTkFrame):
     def __init__(self, master):
