@@ -72,10 +72,10 @@ class App(ctk.CTk):
         self.navbar.grid(row=0, column=0, columnspan=2, sticky="ew")
 
         self.gameframe = frameOne(self)
-        self.gameframe.grid(row=1, column=0, padx=20, pady=20, sticky="nsew")
+        self.gameframe.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
 
         self.scoreFrame = frameTwo(self)
-        self.scoreFrame.grid(row=1, column=1, padx=20, pady=20, sticky="nsew")
+        self.scoreFrame.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
 
 
 
