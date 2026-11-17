@@ -21,6 +21,18 @@ class Navbar(ctk.CTkFrame):
         kwargs.setdefault("height":50)
         kwargs.setdefault("corner_radius": 0) # This is for creating rounded edges for the buttons and such in the window.
 
+        super().__init__(master, **kwargs)
+
+        self.pack_propagate(False)
+
+        self.navContainer = ctk.CTkFrame(self, fg_color="transparent")
+        self.navCountaine.pack(expand=True, fill="y")
+
+        # --- Add your navbar buttons/labels inside self.nav_container below ---
+        # Example:
+        # self.home_btn = ctk.CTkButton(self.nav_container, text="Home")
+        # self.home_btn.pack(side="left", padx=10)
+
 
 
 # This is a class for a frame that I plan on using in the main app.
