@@ -13,13 +13,35 @@ import random
 import customtkinter as ctk
 from tkinter import *
 
-# UI setup
+# This is a class for a frame that I plan on using in the main app.
+class MyFrame(ctk.CTkFrame):
+    def __init__(self, master):
+        super().__init__(master)
 
+        # Configure internal grid layout for the frame
+        self.grid_columnconfigure(0, weight=1)
+
+        # Add widgets inside the frame using 'self' as the master
+        self.label = ctk.CTkLabel(self, font=("Arial", 16, "bold"))
+        self.label.grid(row=0, column=0, padx=20, pady=(15, 5), sticky="w")
+
+        self.entry = ctk.CTkEntry(self, placeholder_text="Enter text here...")
+        self.entry.grid(row=1, column=0, padx=20, pady=5, sticky="ew")
+
+        self.button = ctk.CTkButton(self, text="Submit", command=self.button_event)
+        self.button.grid(row=2, column=0, padx=20, pady=(5, 15))
+
+
+
+# Root window setup
 root = ctk.CTk()
 root.title("Rock, Paper, Scissors")
 root.geometry("500x400")
 root.configure(bg = "#a9a9a9")
 
+
+
+# navbar frame setup
 navbar = ctk.CTkFrame(root, fg_color = "#2c3e50", height = 50)
 navbar.pack(side = "top", fill = "x")
 navbar.pack_propagate(False)
@@ -27,8 +49,6 @@ navContainer = ctk.CTkFrame(navbar, fg_color = "#2c3e50")
 navContainer.pack(expand = True, fill = "y")
 
 
-
-# Functions
 
 # Determine winner function
 def determineWinner(player, opponent):
@@ -46,6 +66,8 @@ def determineWinner(player, opponent):
     else:
         return "Opponent wins"
 
+
+
 # Opponent choice
 def opponentChoice():
     choices = ["Rock", "Paper", "Scissors"]
@@ -54,6 +76,8 @@ def opponentChoice():
     opponentLabel.configure(text=f"Opponent choice: {random_choice}")
 
     return random_choice
+
+
 
 # Player choice
 def setChoice(playerChoice):
@@ -65,6 +89,7 @@ def setChoice(playerChoice):
     result = determineWinner(currentChoice, npcChoice)
 
     updateScore(result)
+
 
 
 # Scoring function
@@ -92,7 +117,6 @@ def updateScore(result):
   
 
 # Global variables
-
 userChoice = ctk.StringVar()
 playerScore = 0
 opponentScore = 0
@@ -100,7 +124,6 @@ opponentScore = 0
 
 
 # Button Styling
-
 btnStyles = {
     "fg_color": "#A73535",
     "text_color": "white",
@@ -109,6 +132,9 @@ btnStyles = {
     "cursor": "hand2"
 }
 
+
+
+# Label styling.
 lblStyles = {
     "font":("Arial", 18),
 }
@@ -116,7 +142,6 @@ lblStyles = {
 
 
 # Buttons
-
 rockButton = ctk.CTkButton(
     navContainer, 
     text = "Rock", 
@@ -156,7 +181,6 @@ scissorsButton.pack(
 
 
 # Labels
-
 userLabel = ctk.CTkLabel(
     root, 
     text=f"Make a choice {userChoice.get()}", 
@@ -221,6 +245,6 @@ gamesPlayed.pack(
 )
 
 
-# Function Calls
 
+# Function Calls
 root.mainloop()
