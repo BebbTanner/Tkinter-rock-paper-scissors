@@ -180,13 +180,8 @@ def updateScore(result):
 
     ratioLabel.configure(text=f"W/L: {ratio:.2f}")
 
+
   
-
-
-
-
-
-
 # Function Calls
 
 app = App()
