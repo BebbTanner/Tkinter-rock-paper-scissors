@@ -30,7 +30,13 @@ class Navbar(ctk.CTkFrame):
 
         # --- Add your navbar buttons/labels inside self.nav_container below ---
         self.rockButton = ctk.CTkButton(self.navContainer, text="Rock", command= lambda: setChoice("Rock"), **btnStyles)
-        self.rockButton.pack(    side="left", padx=10, pady=10)
+        self.rockButton.pack(side="left", padx=10, pady=10)
+
+        self.paperButton = ctk.CTkButton(self.navContainer, text="Paper", command= lambda: setChoice("Paper"), **btnStyles)
+        self.paperButton.pack(side="left", padx=10, pady=10)
+
+        self.scissorsButton = ctk.CTkButton(self.navContainer, text="Scissors", command= lambda: setChoice("Scissors"), **btnStyles)
+        self.scissorsButton.pack(side="left", padx=10, pady=10)
 
 
 
