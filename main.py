@@ -33,6 +33,24 @@ class MyFrame(ctk.CTkFrame):
 
 
 
+# 2. Define the main application window
+class App(ctk.CTk):
+    def __init__(self):
+        super().__init__()
+
+        self.title("Custom Frame Example")
+        self.geometry("400x250")
+
+        # Configure grid so the frame expands properly
+        self.grid_rowconfigure(0, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+
+        # Instantiate and place the custom frame
+        self.my_frame = MyFrame(master=self, title="User Input", corner_radius=10)
+        self.my_frame.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
+
+
+
 # Root window setup
 root = ctk.CTk()
 root.title("Rock, Paper, Scissors")
