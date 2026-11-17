@@ -115,7 +115,7 @@ class App(ctk.CTk):
         self.scoreFrame = frameTwo(self)
         self.scoreFrame.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
 
-root = ctk.CTk()
+
 
 # Determine winner function
 def determineWinner(player, opponent):
