@@ -71,8 +71,17 @@ class frameTwo(ctk.CTkFrame):
         self.grid_columnconfigure((0,1,2), weight=1)
         self.grid_rowconfigure(1, weight=1)
 
-        self.frame2Label = ctk.CTkLabel(self, text="Frame 2")
-        self.frame2Label.grid(row=0, column=0, padx=10, pady=10)
+        self.playerLabel = ctk.CTkLabel(self, text="Player Score: ")
+        self.playerLabel.grid(row=0, column=0, padx=10, pady=10)
+
+        self.choiceLabel = ctk.CTkLabel(self, text="0")
+        self.choiceLabel.grid(row=0, column=1, padx=10, pady=10)
+
+        self.opponentLabel = ctk.CTkLabel(self, text="Opponent Score: ")
+        self.opponentLabel.grid(row=1, column=0, padx=10, pady=10)
+
+        self.oppChoiceLabel = ctk.CTkLabel(self, text="0")
+        self.oppChoiceLabel.grid(row=1, column=1, padx=10, pady=10)
 
 
 
