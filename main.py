@@ -8,6 +8,10 @@
 
     Ok so I got the layout of the UI set.
     Now the next step in the process is to start getting the functions and placing them on the window.
+
+    Im thinking I might lift out the 2.0 variant to its own repo.
+    This is starting to look rather messy and I think it would be better if I had these both seperated.
+    Because with the 2.0 build I believe I am to the point where I am ready to start implementing the logic for the buttons.
 '''
 
 # Libraries
@@ -106,7 +110,6 @@ class App(ctk.CTk):
 
 
 
-
 root = ctk.CTk()
 root.title("Rock, Paper, Scissors")
 root.geometry("500x400")
@@ -162,8 +165,6 @@ def setChoice(playerChoice):
     updateScore(result)
 
  
-
-
 
 # Scoring function
 def updateScore(result):
