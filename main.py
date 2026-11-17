@@ -54,6 +54,9 @@ class frameTwo(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
 
+        self.grid_columnconfigure((0,1,2), weight=1)
+        self.grid_rowconfigure(1, weight=1)
+
 
 
 # 2. Define the main application window
@@ -73,8 +76,11 @@ class App(ctk.CTk):
         self.navbar = Navbar(self)
         self.navbar.grid(row=0, column=0, sticky="ew")
 
-        self.game_frame = frameOne(self, corner_radius=12)
-        self.game_frame.grid(row=1, column=0, padx=20, pady=20, sticky="nsew")
+        self.gameframe = frameOne(self, corner_radius=12)
+        self.gameframe.grid(row=1, column=0, padx=20, pady=20, sticky="nsew")
+
+        self.scoreFrame = frameTwo(self, corner_radius=12)
+        self.scoreFrame.grid(row=1, column=1, padx=20, pady=20, sticky="nsew")
 
 
 
