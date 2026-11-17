@@ -42,16 +42,8 @@ class Navbar(ctk.CTkFrame):
 
 # This is a class for a frame that I plan on using in the main app.
 class myFrame(ctk.CTkFrame):
-    def __init__(self, master, title, values):
-        super().__init__(master)
-
-        self.grid_columnconfigure(0, weight=1)
-        self.values = values
-        self.title = title
-        self.checkboxes = []
-
-        self.title = ctk.CTkLabel(self, text=self.title, fg_color="gray30", corner_radius=6)
-        self.title.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="ew")
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
 
 
 
