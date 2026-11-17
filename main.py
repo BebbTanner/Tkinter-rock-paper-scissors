@@ -1,20 +1,5 @@
 '''
-    Right now I am trying to convert the legacy layout to the new class based system layout.
-    This should help with building out the layout that I actually want. 
-    I am using the example that I uploaded earlier.
-
-    I am slowly using my sanity with the conversion for this got damned app.
-    Why do I continue to do this to myself?
-
-    Ok so I got the layout of the UI set.
-    Now the next step in the process is to start getting the functions and placing them on the window.
-
-    Im thinking I might lift out the 2.0 variant to its own repo.
-    This is starting to look rather messy and I think it would be better if I had these both seperated.
-    Because with the 2.0 build I believe I am to the point where I am ready to start implementing the logic for the buttons.
-
-    I have created a 2.0 branch for this repo.
-    Now I want to go to the main branch and remove any of the 2.0 code from it.
+    The 2.0 branch and the 1.0 branch have been seperated.
 '''
 
 # Libraries
