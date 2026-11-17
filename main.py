@@ -17,7 +17,10 @@ from tkinter import *
 class Navbar(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
 
-        
+        kwargs.setdefault("fg_color":"#2c3e50")
+        kwargs.setdefault("height":50)
+        kwargs.setdefault("corner_radius": 0) # This is for creating rounded edges for the buttons and such in the window.
+
 
 
 # This is a class for a frame that I plan on using in the main app.
