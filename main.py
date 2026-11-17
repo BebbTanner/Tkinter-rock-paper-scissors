@@ -8,6 +8,25 @@ import random
 import customtkinter as ctk
 from tkinter import *
 
+
+
+# Button Styling
+btnStyles = {
+    "fg_color": "#A73535",
+    "text_color": "white",
+    "hover_color":"#702323",
+    "font": ("Arial", 12, "bold"),
+    "cursor": "hand2"
+}
+
+
+
+# Label styling.
+lblStyles = {
+    "font":("Arial", 18),
+}
+
+
 # Navbar Class
 class Navbar(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
@@ -96,21 +115,7 @@ class App(ctk.CTk):
         self.scoreFrame = frameTwo(self)
         self.scoreFrame.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
 
-
-
 root = ctk.CTk()
-root.title("Rock, Paper, Scissors")
-root.geometry("500x400")
-
-
-
-navbar = ctk.CTkFrame(root, fg_color = "#2c3e50", height = 50)
-navbar.pack(side = "top", fill = "x")
-navbar.pack_propagate(False)
-navContainer = ctk.CTkFrame(navbar, fg_color = "#2c3e50")
-navContainer.pack(expand = True, fill = "y")
-
-
 
 # Determine winner function
 def determineWinner(player, opponent):
@@ -177,28 +182,10 @@ def updateScore(result):
 
   
 
-# Global variables
-userChoice = ctk.StringVar()
-playerScore = 0
-opponentScore = 0
 
 
 
-# Button Styling
-btnStyles = {
-    "fg_color": "#A73535",
-    "text_color": "white",
-    "hover_color":"#702323",
-    "font": ("Arial", 12, "bold"),
-    "cursor": "hand2"
-}
 
-
-
-# Label styling.
-lblStyles = {
-    "font":("Arial", 18),
-}
 
 # Function Calls
 
