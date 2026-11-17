@@ -12,6 +12,9 @@
     Im thinking I might lift out the 2.0 variant to its own repo.
     This is starting to look rather messy and I think it would be better if I had these both seperated.
     Because with the 2.0 build I believe I am to the point where I am ready to start implementing the logic for the buttons.
+
+    I have created a 2.0 branch for this repo.
+    Now I want to go to the main branch and remove any of the 2.0 code from it.
 '''
 
 # Libraries
