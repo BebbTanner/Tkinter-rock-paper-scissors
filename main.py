@@ -67,12 +67,6 @@ class App(ctk.CTk):
         self.navbar = Navbar(self)
         self.navbar.grid(row=0, column=0, sticky="ew")
 
-        self.myFrame = ctk.CTkFrame(self, fg_color="transparent")
-        self.myFrame.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
-
-        self.checkbox_frame = myFrame(self, "Values", values=["value 1", "value 2", "value 3"])
-        self.checkbox_frame.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="nsew")
-
 
 
 # Root window setup
