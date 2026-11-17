@@ -5,6 +5,9 @@
 
     I am slowly using my sanity with the conversion for this got damned app.
     Why do I continue to do this to myself?
+
+    Ok so I got the layout of the UI set.
+    Now the next step in the process is to start getting the functions and placing them on the window.
 '''
 
 # Libraries
