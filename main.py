@@ -50,6 +50,9 @@ class frameOne(ctk.CTkFrame):
         self.grid_columnconfigure((0,1,2), weight=1)
         self.grid_rowconfigure(1, weight=1)
 
+        self.label = ctk.CTkLabel(self, text="Frame 1")
+        self.label.grid(row=0, column=0, padx=20, pady=20)
+
 
 
 class frameTwo(ctk.CTkFrame):
@@ -58,6 +61,9 @@ class frameTwo(ctk.CTkFrame):
 
         self.grid_columnconfigure((0,1,2), weight=1)
         self.grid_rowconfigure(1, weight=1)
+
+        self.label2 = ctk.CTkLabel(self, text="Frame 2")
+        self.label2.grid(row=0, column=0, padx=20, pady=20)
 
 
 
@@ -79,6 +85,7 @@ class App(ctk.CTk):
 
         self.scoreFrame = frameTwo(self)
         self.scoreFrame.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
+
 
 
 
@@ -136,7 +143,7 @@ def setChoice(playerChoice):
 
     updateScore(result)
 
-    
+ 
 
 
 
