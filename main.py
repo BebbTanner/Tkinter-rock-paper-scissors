@@ -53,13 +53,13 @@ class frameOne(ctk.CTkFrame):
         self.playerLabel = ctk.CTkLabel(self, text="Player Choice: ")
         self.playerLabel.grid(row=0, column=0, padx=10, pady=10)
 
-        self.choiceLabel = ctk.CTkLabel(self, text="test")
+        self.choiceLabel = ctk.CTkLabel(self, text="Make a choice")
         self.choiceLabel.grid(row=0, column=1, padx=10, pady=10)
 
         self.opponentLabel = ctk.CTkLabel(self, text="Opponent Choice: ")
         self.opponentLabel.grid(row=1, column=0, padx=10, pady=10)
 
-        self.oppChoiceLabel = ctk.CTkLabel(self, text="test")
+        self.oppChoiceLabel = ctk.CTkLabel(self, text="Waiting for player")
         self.oppChoiceLabel.grid(row=1, column=1, padx=10, pady=10)
 
 
