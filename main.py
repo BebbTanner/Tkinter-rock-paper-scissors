@@ -26,7 +26,7 @@ class Navbar(ctk.CTkFrame):
         self.pack_propagate(False)
 
         self.navContainer = ctk.CTkFrame(self, fg_color="transparent")
-        self.navCountaine.pack(expand=True, fill="y")
+        self.navContainer.pack(expand=True, fill="y")
 
         # --- Add your navbar buttons/labels inside self.nav_container below ---
         # Example:
@@ -66,8 +66,14 @@ class App(ctk.CTk):
         self.geometry("500x400")
 
         # Configure grid so the frame expands properly
-        self.grid_rowconfigure(0, weight=1)
+        self.grid_rowconfigure(1, weight=1)
         self.grid_columnconfigure(0, weight=1)
+
+        self.navbar = Navbar(self)
+        self.navbar.grid(row=0, column=0, sticky="ew")
+
+        self.game_frame = ctk.CTkFrame(self, fg_color="transparent")
+        self.game_frame.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
 
 
 
