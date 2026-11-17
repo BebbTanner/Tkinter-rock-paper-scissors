@@ -310,7 +310,6 @@ ratioLabel.pack(
 
 
 # Function Calls
-#root.mainloop()
 
 app = App()
 app.mainloop()
