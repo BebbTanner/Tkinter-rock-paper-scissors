@@ -17,9 +17,9 @@ from tkinter import *
 class Navbar(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
 
-        kwargs.setdefault("fg_color":"#2c3e50")
-        kwargs.setdefault("height":50)
-        kwargs.setdefault("corner_radius": 0) # This is for creating rounded edges for the buttons and such in the window.
+        kwargs.setdefault("fg_color","#2c3e50")
+        kwargs.setdefault("height",50)
+        kwargs.setdefault("corner_radius", 0) # This is for creating rounded edges for the buttons and such in the window.
 
         super().__init__(master, **kwargs)
 
@@ -32,6 +32,8 @@ class Navbar(ctk.CTkFrame):
         # Example:
         # self.home_btn = ctk.CTkButton(self.nav_container, text="Home")
         # self.home_btn.pack(side="left", padx=10)
+
+        # So eventually, the rock, paper, and scissors buttons will need to be relocated to this class.
 
 
 
