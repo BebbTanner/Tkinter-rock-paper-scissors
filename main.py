@@ -2,6 +2,9 @@
     Right now I am trying to convert the legacy layout to the new class based system layout.
     This should help with building out the layout that I actually want. 
     I am using the example that I uploaded earlier.
+
+    I am slowly using my sanity with the conversion for this got damned app.
+    Why do I continue to do this to myself?
 '''
 
 # Libraries
