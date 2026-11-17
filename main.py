@@ -70,17 +70,14 @@ class App(ctk.CTk):
         self.grid_rowconfigure(1, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
-        self.grid_rowconfigure(1, weight=1)
-        self.grid_columnconfigure(0, weight=1)
-
         self.navbar = Navbar(self)
         self.navbar.grid(row=0, column=0, sticky="ew")
 
         self.gameframe = frameOne(self, corner_radius=12)
         self.gameframe.grid(row=1, column=0, padx=20, pady=20, sticky="nsew")
 
-        self.scoreFrame = frameTwo(self, corner_radius=12)
-        self.scoreFrame.grid(row=1, column=1, padx=20, pady=20, sticky="nsew")
+        #self.scoreFrame = frameTwo(self, corner_radius=12)
+        #self.scoreFrame.grid(row=1, column=1, padx=20, pady=20, sticky="nsew")
 
 
 
