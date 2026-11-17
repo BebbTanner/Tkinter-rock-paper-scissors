@@ -19,7 +19,7 @@ class Navbar(ctk.CTkFrame):
 
         kwargs.setdefault("fg_color","#2c3e50")
         kwargs.setdefault("height",50)
-        kwargs.setdefault("corner_radius", 0) # This is for creating rounded edges for the buttons and such in the window.
+        kwargs.setdefault("corner_radius", 0)
 
         super().__init__(master, **kwargs)
 
@@ -40,7 +40,6 @@ class Navbar(ctk.CTkFrame):
 
 
 
-# This is a class for a frame that I plan on using in the main app.
 class frameOne(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
@@ -59,7 +58,6 @@ class frameTwo(ctk.CTkFrame):
 
 
 
-# 2. Define the main application window
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -81,14 +79,12 @@ class App(ctk.CTk):
 
 
 
-# Root window setup
 root = ctk.CTk()
 root.title("Rock, Paper, Scissors")
 root.geometry("500x400")
 
 
 
-# navbar frame setup
 navbar = ctk.CTkFrame(root, fg_color = "#2c3e50", height = 50)
 navbar.pack(side = "top", fill = "x")
 navbar.pack_propagate(False)
