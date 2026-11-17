@@ -50,6 +50,12 @@ class frameOne(ctk.CTkFrame):
 
 
 
+class frameTwo(ctk.CTkFrame):
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
+
+
+
 # 2. Define the main application window
 class App(ctk.CTk):
     def __init__(self):
