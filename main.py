@@ -66,7 +66,7 @@ class App(ctk.CTk):
         self.geometry("500x400")
 
         self.grid_rowconfigure(1, weight=1)
-        self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure((0,1), weight=1)
 
         self.navbar = Navbar(self)
         self.navbar.grid(row=0, column=0, columnspan=2, sticky="ew")
