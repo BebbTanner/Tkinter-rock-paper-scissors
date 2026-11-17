@@ -38,22 +38,17 @@ class Navbar(ctk.CTkFrame):
 
 
 # This is a class for a frame that I plan on using in the main app.
-class MyFrame(ctk.CTkFrame):
-    def __init__(self, master):
+class myFrame(ctk.CTkFrame):
+    def __init__(self, master, title, values):
         super().__init__(master)
 
-        # Configure internal grid layout for the frame
         self.grid_columnconfigure(0, weight=1)
+        self.values = values
+        self.title = title
+        self.checkboxes = []
 
-        # Add widgets inside the frame using 'self' as the master
-        self.label = ctk.CTkLabel(self, font=("Arial", 16, "bold"))
-        self.label.grid(row=0, column=0, padx=20, pady=(15, 5), sticky="w")
-
-        self.entry = ctk.CTkEntry(self, placeholder_text="Enter text here...")
-        self.entry.grid(row=1, column=0, padx=20, pady=5, sticky="ew")
-
-        self.button = ctk.CTkButton(self, text="Submit", command=self.button_event)
-        self.button.grid(row=2, column=0, padx=20, pady=(5, 15))
+        self.title = ctk.CTkLabel(self, text=self.title, fg_color="gray30", corner_radius=6)
+        self.title.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="ew")
 
 
 
@@ -72,8 +67,11 @@ class App(ctk.CTk):
         self.navbar = Navbar(self)
         self.navbar.grid(row=0, column=0, sticky="ew")
 
-        self.game_frame = ctk.CTkFrame(self, fg_color="transparent")
-        self.game_frame.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
+        self.myFrame = ctk.CTkFrame(self, fg_color="transparent")
+        self.myFrame.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
+
+        self.checkbox_frame = myFrame(self, "Values", values=["value 1", "value 2", "value 3"])
+        self.checkbox_frame.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="nsew")
 
 
 
