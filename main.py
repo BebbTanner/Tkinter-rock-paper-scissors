@@ -8,7 +8,7 @@ import random
 import customtkinter as ctk
 from tkinter import *
 
-
+ctk.set_default_color_theme("gold")
 
 # Button Styling
 btnStyles = {
@@ -43,13 +43,13 @@ class Navbar(ctk.CTkFrame):
         self.navContainer.pack(expand=True, fill="y")
 
         # --- Add your navbar buttons/labels inside self.nav_container below ---
-        self.rockButton = ctk.CTkButton(self.navContainer, text="Rock", command= lambda: setChoice("Rock"), **btnStyles)
+        self.rockButton = ctk.CTkButton(self.navContainer, text="Rock", command= lambda: setChoice("Rock"))
         self.rockButton.pack(side="left", padx=10, pady=10)
 
-        self.paperButton = ctk.CTkButton(self.navContainer, text="Paper", command= lambda: setChoice("Paper"), **btnStyles)
+        self.paperButton = ctk.CTkButton(self.navContainer, text="Paper", command= lambda: setChoice("Paper"))
         self.paperButton.pack(side="left", padx=10, pady=10)
 
-        self.scissorsButton = ctk.CTkButton(self.navContainer, text="Scissors", command= lambda: setChoice("Scissors"), **btnStyles)
+        self.scissorsButton = ctk.CTkButton(self.navContainer, text="Scissors", command= lambda: setChoice("Scissors"))
         self.scissorsButton.pack(side="left", padx=10, pady=10)
 
 
