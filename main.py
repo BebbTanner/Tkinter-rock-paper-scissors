@@ -10,23 +10,6 @@ from tkinter import *
 
 ctk.set_default_color_theme("gold")
 
-# Button Styling
-btnStyles = {
-    "fg_color": "#A73535",
-    "text_color": "white",
-    "hover_color":"#702323",
-    "font": ("Arial", 12, "bold"),
-    "cursor": "hand2"
-}
-
-
-
-# Label styling.
-lblStyles = {
-    "font":("Arial", 18),
-}
-
-
 # Navbar Class
 class Navbar(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
